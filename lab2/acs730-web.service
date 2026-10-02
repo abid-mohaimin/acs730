@@ -1,0 +1,25 @@
+[Unit]
+Description=ACS730 Lab 2 web application (static site served by Python)
+Documentation=https://github.com/abid-mohaimin/acs730/tree/main/lab2
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+# Least privilege: the app runs as a dedicated system user, never as root.
+User=acs730web
+Group=acs730web
+WorkingDirectory=/opt/acs730-web
+ExecStart=/usr/bin/python3 -m http.server 8080 --bind 0.0.0.0 --directory /opt/acs730-web
+Restart=on-failure
+RestartSec=5
+
+# Extra hardening: the service cannot gain privileges or write to the system.
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+
+[Install]
+# This line is what "systemctl enable" hooks into so the service starts at boot.
+WantedBy=multi-user.target
