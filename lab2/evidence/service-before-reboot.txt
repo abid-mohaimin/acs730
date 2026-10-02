@@ -1,0 +1,20 @@
+active
+enabled
+● acs730-web.service - ACS730 Lab 2 demo web application
+     Loaded: loaded (/etc/systemd/system/acs730-web.service; enabled; preset: disabled)
+     Active: active (running) since Fri 2026-10-02 03:24:04 UTC; 5min ago
+   Main PID: 3209 (python3)
+      Tasks: 1 (limit: 1059)
+     Memory: 9.6M
+        CPU: 118ms
+     CGroup: /system.slice/acs730-web.service
+             └─3209 /usr/bin/python3 -m http.server 80 --directory /opt/acs730-web
+
+Oct 02 03:24:04 ip-172-31-24-152.ec2.internal systemd[1]: Starting acs730-web.service - ACS730 Lab 2 demo web application...
+Oct 02 03:24:04 ip-172-31-24-152.ec2.internal systemd[1]: Started acs730-web.service - ACS730 Lab 2 demo web application.
+Oct 02 03:24:05 ip-172-31-24-152.ec2.internal python3[3209]: 127.0.0.1 - - [02/Oct/2026 03:24:05] "GET / HTTP/1.1" 200 -
+Oct 02 03:25:47 ip-172-31-24-152.ec2.internal python3[3209]: 32.198.27.78 - - [02/Oct/2026 03:25:47] "GET / HTTP/1.1" 200 -
+Oct 02 03:28:34 ip-172-31-24-152.ec2.internal python3[3209]: 198.235.24.132 - - [02/Oct/2026 03:28:34] code 400, message Bad request version ('À\\x13À')
+Oct 02 03:28:34 ip-172-31-24-152.ec2.internal python3[3209]: 198.235.24.132 - - [02/Oct/2026 03:28:34] "\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03Á £H\x9dØU0KU\x09Ãîë~rB\x0bµ\x86 ¯(K,\x87\x03Â\x86I\x81a ~íÐVz[\x13\x9fÈþÌÏõ~æl\x9a\x15Õ½w\x9a2±\x1aÂ\x98Ó\x8bæ\x07Y\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À" 400 -
+Oct 02 03:28:34 ip-172-31-24-152.ec2.internal python3[3209]: 198.235.24.132 - - [02/Oct/2026 03:28:34] code 400, message Bad HTTP/0.9 request type ("\\x16\\x03\\x01\\x00Ê\\x01\\x00\\x00Æ\\x03\\x03Úf®*|*\\x9e\\x01Öiü»ÝÁkS\\x9e$2\\x9dÄ~\\x8aÑÍå(ð\\x17íê\\x14\\x00\\x00hÌ\\x14Ì\\x13À/À+À0À,À\\x11À\\x07À'À#À\\x13À")
+Oct 02 03:28:34 ip-172-31-24-152.ec2.internal python3[3209]: 198.235.24.132 - - [02/Oct/2026 03:28:34] "\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03Úf®*|*\x9e\x01Öiü»ÝÁkS\x9e$2\x9dÄ~\x8aÑÍå(ð\x17íê\x14\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\x09À(À$À\x14À" 400 -
