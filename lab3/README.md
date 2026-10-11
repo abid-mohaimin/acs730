@@ -1,5 +1,3 @@
-# Lab 3
+# Lab 3: GitHub Actions, Terraform and Session-Scoped Credentials
 
-Instructions for this section will be provided in class and on Blackboard when we reach it.
-
-Put your work for Lab 3 in this folder.
+In a real AWS account the pipeline would use OIDC, so each workflow run swaps a short-lived token signed by GitHub for a temporary IAM role session, which means no access keys are ever stored in GitHub where they could leak or be forgotten. AWS Academy blocks the IAM writes needed to create the OIDC provider and role, so this course copies the Vocareum session credentials into repository secrets with `scripts/refresh-gha-creds.sh`, and if they leak the damage is limited because they stop working when the lab session ends, they only carry the restricted LabRole permissions, and they only reach a sandbox account with a fixed budget.
