@@ -1,0 +1,14 @@
+Terraform plan / apply	UNKNOWN STEP	2026-10-11T03:08:10.2578895Z     "Arn": "arn:aws:sts::072374718788:assumed-role/voclabs/user4402589=Md_Abid"
+Terraform plan / apply	UNKNOWN STEP	2026-10-11T03:08:11.6792765Z Successfully configured the backend "s3"! Terraform will automatically
+Terraform plan / apply	UNKNOWN STEP	2026-10-11T03:08:23.1212212Z aws_security_group.lab3: Refreshing state... [id=sg-0a9d0c93183a78349]
+Terraform plan / apply	UNKNOWN STEP	2026-10-11T03:08:23.3857360Z   # aws_security_group.lab3 will be updated in-place
+Terraform plan / apply	UNKNOWN STEP	2026-10-11T03:08:23.3858170Z   ~ resource "aws_security_group" "lab3" {
+Terraform plan / apply	UNKNOWN STEP	2026-10-11T03:08:23.3861641Z           ~ "Revision" = "1" -> "2"
+Terraform plan / apply	UNKNOWN STEP	2026-10-11T03:08:23.3863069Z           ~ "Revision"  = "1" -> "2"
+Terraform plan / apply	UNKNOWN STEP	2026-10-11T03:08:23.3865825Z Plan: 0 to add, 1 to change, 0 to destroy.
+Terraform plan / apply	UNKNOWN STEP	2026-10-11T03:08:23.3866891Z   ~ revision          = "1" -> "2"
+Terraform plan / apply	UNKNOWN STEP	2026-10-11T03:08:25.6437980Z ^[[0m^[[1maws_security_group.lab3: Modifying... [id=sg-0a9d0c93183a78349]^[[0m^[[0m
+Terraform plan / apply	UNKNOWN STEP	2026-10-11T03:08:25.9552986Z ^[[0m^[[1maws_security_group.lab3: Modifications complete after 0s [id=sg-0a9d0c93183a78349]^[[0m
+Terraform plan / apply	UNKNOWN STEP	2026-10-11T03:08:26.0547598Z Apply complete! Resources: 0 added, 1 changed, 0 destroyed.
+Terraform plan / apply	UNKNOWN STEP	2026-10-11T03:08:26.0548685Z ^[[0mrevision = "2"
+Terraform plan / apply	UNKNOWN STEP	2026-10-11T03:08:26.0548985Z security_group_id = "sg-0a9d0c93183a78349"
