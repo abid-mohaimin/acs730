@@ -1,0 +1,65 @@
+name: lab3-ci
+
+# Checks that need no cloud access at all: formatting, validation and
+# script syntax. No AWS secrets are used anywhere in this workflow.
+on:
+  push:
+    paths:
+      - "lab3/**"
+      - "scripts/**"
+      - ".github/workflows/lab3-*.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "lab3/**"
+      - "scripts/**"
+      - ".github/workflows/lab3-*.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  terraform-checks:
+    name: Terraform fmt and validate
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: lab3
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.10.3
+
+      - name: terraform fmt
+        run: terraform fmt -check -recursive -diff
+
+      - name: terraform init (no backend, no credentials)
+        run: terraform init -backend=false -input=false
+
+      - name: terraform validate
+        run: terraform validate
+
+  script-checks:
+    name: Shell script syntax
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: bash -n on every script
+        run: |
+          status=0
+          while IFS= read -r f; do
+            if bash -n "$f"; then
+              echo "ok    $f"
+            else
+              echo "FAIL  $f"
+              status=1
+            fi
+          done < <(find scripts lab3 -name '*.sh' -type f)
+          exit $status
