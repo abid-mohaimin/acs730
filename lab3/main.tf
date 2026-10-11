@@ -42,7 +42,7 @@ variable "aws_region" {
 # Bump this number in a pull request to prove the pipeline modifies the
 # existing security group in place instead of creating a second one.
 locals {
-  revision = "1"
+  revision = "2"
 }
 
 # A free resource that is easy to see in the console. Tag changes are an
