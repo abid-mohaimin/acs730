@@ -12,3 +12,4 @@
 **Whether the dependency layer is CACHED on a code-only rebuild.** In the slim image the pip install layer showed CACHED after a one-word edit to app.py and the rebuild took 0.635 s, while in the naive image pip install ran again (4.7 s of a 5.313 s rebuild) because COPY . . comes before RUN pip install, so any code change invalidates the install layer.
 
 **What .dockerignore kept out of the context.** The build context went from 831B for the naive build without a .dockerignore to 473B for the slim build, because .dockerignore kept README.md, the evidence folder and the Dockerfiles out; .git never appeared in either build because the context is lab4/ and .git lives at the repository root.
+
