@@ -27,3 +27,7 @@ Times are job durations taken from `gh run view <id> --json jobs`. Run IDs: base
 **pip cache verdict.** Not worth it for this lab, because the app only installs flask, gunicorn and pytest, which download in a second or two, so restoring and checking the cache took about as long as downloading the packages fresh.
 
 **Docker layer cache verdict.** Not worth it here either, because even though the hit run restored every layer as CACHED, setting up buildx and importing and exporting the cache through GitHub's cache service added more time than skipping a 5 second pip install saved; it would pay off for a bigger image with a slow dependency install.
+
+## Composite action vs reusable workflow
+
+The dependency setup is an action because it is only a few steps (setup-python with the pip cache, then pip install) that have to run on the same runner as the tests that need those packages, so it drops straight into the existing test job. The image build is a reusable workflow because it is a whole job with its own runner that needs packages: write, a permission the test job must never have, and it hands the finished image-ref back to the caller as an output.
