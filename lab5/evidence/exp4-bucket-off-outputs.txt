@@ -1,0 +1,8 @@
+provider_target = "localstack (http://localhost:4566)"
+subnet_ids = {
+  "a" = "subnet-81e1e0b7"
+  "b" = "subnet-15a6ee79"
+}
+vpc_id = "vpc-f228b518"
+web_public_ip = "54.214.224.38"
+web_url = "http://54.214.224.38/"

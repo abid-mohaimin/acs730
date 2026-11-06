@@ -1,0 +1,15 @@
+aws_route_table_association.public["a"]: Refreshing state... [id=rtbassoc-e9dfa134]
+aws_instance.web: Refreshing state... [id=i-d3a4a35170c550176]
+
+Planning failed. Terraform encountered an error while generating this plan.
+
+
+Error: Invalid index
+
+  on outputs.tf line 19, in output "artifact_bucket":
+  19:   value       = aws_s3_bucket.artifacts[0].bucket
+    ├────────────────
+    │ aws_s3_bucket.artifacts is empty tuple
+
+The given key does not identify an element in this collection value: the
+collection has no elements.
