@@ -1,0 +1,82 @@
+      [31m-[0m[0m "i-0687dcb5836978c67",
+    ] [90m-> null[0m[0m
+  [31m-[0m[0m web_public_ips      = [
+      [31m-[0m[0m "54.242.121.7",
+      [31m-[0m[0m "98.93.56.14",
+    ] [90m-> null[0m[0m
+[0m[1maws_instance.web[0]: Destroying... [id=i-0b58602164c98245c][0m[0m
+[0m[1maws_instance.web[1]: Destroying... [id=i-0687dcb5836978c67][0m[0m
+[0m[1maws_instance.web[0]: Still destroying... [id=i-0b58602164c98245c, 10s elapsed][0m[0m
+[0m[1maws_instance.web[1]: Still destroying... [id=i-0687dcb5836978c67, 10s elapsed][0m[0m
+[0m[1maws_instance.web[1]: Still destroying... [id=i-0687dcb5836978c67, 20s elapsed][0m[0m
+[0m[1maws_instance.web[0]: Still destroying... [id=i-0b58602164c98245c, 20s elapsed][0m[0m
+[0m[1maws_instance.web[1]: Destruction complete after 30s[0m
+[0m[1maws_instance.web[0]: Still destroying... [id=i-0b58602164c98245c, 30s elapsed][0m[0m
+[0m[1maws_instance.web[0]: Destruction complete after 30s[0m
+[0m[1maws_security_group.web: Destroying... [id=sg-01f63ce5816bb1256][0m[0m
+[0m[1maws_security_group.web: Destruction complete after 1s[0m
+[0m[1m[32m
+Destroy complete! Resources: 3 destroyed.
+[0msnapshot behind the AMI: snap-015262ff4615bab65
+{
+    "Return": true,
+    "DeleteSnapshotResults": []
+}
+delete: s3://acs730-lab6-ssm-072374718788/pipeline-run.png
+delete: s3://acs730-lab6-ssm-072374718788/golden-ami.png
+remove_bucket: acs730-lab6-ssm-072374718788
+
+== EC2 instances
+   i-009236f7a38c1867a  running  t3.micro  acs730-workstation   (your workstation -- keep this)
+
+== Your AMIs (and their snapshots)
+
+== Unattached EBS volumes
+
+== Snapshots you own
+
+== Non-default security groups
+   sg-0a866356b3bfb3e81  launch-wizard-2
+      -> aws ec2 delete-security-group --group-id sg-0a866356b3bfb3e81
+   sg-02981a7ead0de666d  launch-wizard-1
+      -> aws ec2 delete-security-group --group-id sg-02981a7ead0de666d
+   sg-0a9d0c93183a78349  acs730-lab3-sg
+      -> aws ec2 delete-security-group --group-id sg-0a9d0c93183a78349
+   sg-099816819157bd4f0  launch-wizard-4
+      -> aws ec2 delete-security-group --group-id sg-099816819157bd4f0
+   sg-0681945dc11558ec1  launch-wizard-3
+      -> aws ec2 delete-security-group --group-id sg-0681945dc11558ec1
+
+== Terraform state files that still track resources
+
+Review the items above. This script deleted nothing.
+
+fatal error: An error occurred (NoSuchBucket) when calling the ListObjectsV2 operation: The specified bucket does not exist
+
+remove_bucket failed: Unable to delete all objects in the bucket, bucket will not be deleted.
+
+== EC2 instances
+   i-009236f7a38c1867a  running  t3.micro  acs730-workstation   (your workstation -- keep this)
+
+== Your AMIs (and their snapshots)
+
+== Unattached EBS volumes
+
+== Snapshots you own
+
+== Non-default security groups
+   sg-0a866356b3bfb3e81  launch-wizard-2
+      -> aws ec2 delete-security-group --group-id sg-0a866356b3bfb3e81
+   sg-02981a7ead0de666d  launch-wizard-1
+      -> aws ec2 delete-security-group --group-id sg-02981a7ead0de666d
+   sg-0a9d0c93183a78349  acs730-lab3-sg
+      -> aws ec2 delete-security-group --group-id sg-0a9d0c93183a78349
+   sg-099816819157bd4f0  launch-wizard-4
+      -> aws ec2 delete-security-group --group-id sg-099816819157bd4f0
+   sg-0681945dc11558ec1  launch-wizard-3
+      -> aws ec2 delete-security-group --group-id sg-0681945dc11558ec1
+
+== Terraform state files that still track resources
+
+Review the items above. This script deleted nothing.
+
