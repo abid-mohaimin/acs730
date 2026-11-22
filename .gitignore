@@ -1,11 +1,10 @@
 *.pem
 *.tfstate
-*.tfstate.backup
-.terraform/
-.env
-credentials
-.terraform/
-*.tfstate
 *.tfstate.*
-tfplan
+*.tfstate.backup
+.env
+.terraform/
 crash.log
+credentials
+packer-manifest.json
+tfplan
