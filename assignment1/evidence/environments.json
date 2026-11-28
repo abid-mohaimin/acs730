@@ -1,0 +1,83 @@
+{
+  "environments": {
+    "total_count": 2,
+    "environments": [
+      {
+        "id": 28833534289,
+        "node_id": "EN_kwDOUeLGOs8AAAAGtpzRUQ",
+        "name": "prod",
+        "url": "https://api.github.com/repos/abid-mohaimin/acs730/environments/prod",
+        "html_url": "https://github.com/abid-mohaimin/acs730/deployments/activity_log?environments_filter=prod",
+        "created_at": "2026-11-28T07:53:01Z",
+        "updated_at": "2026-11-28T07:53:01Z",
+        "can_admins_bypass": true,
+        "protection_rules": [
+          {
+            "id": 74330975,
+            "node_id": "GA_kwDOUeLGOs4EbjNf",
+            "type": "required_reviewers",
+            "prevent_self_review": false,
+            "reviewers": [
+              {
+                "type": "User",
+                "reviewer": {
+                  "login": "abid-mohaimin",
+                  "id": 330217754,
+                  "node_id": "U_kgDOE665Gg",
+                  "avatar_url": "https://avatars.githubusercontent.com/u/330217754?v=4",
+                  "gravatar_id": "",
+                  "url": "https://api.github.com/users/abid-mohaimin",
+                  "html_url": "https://github.com/abid-mohaimin",
+                  "followers_url": "https://api.github.com/users/abid-mohaimin/followers",
+                  "following_url": "https://api.github.com/users/abid-mohaimin/following{/other_user}",
+                  "gists_url": "https://api.github.com/users/abid-mohaimin/gists{/gist_id}",
+                  "starred_url": "https://api.github.com/users/abid-mohaimin/starred{/owner}{/repo}",
+                  "subscriptions_url": "https://api.github.com/users/abid-mohaimin/subscriptions",
+                  "organizations_url": "https://api.github.com/users/abid-mohaimin/orgs",
+                  "repos_url": "https://api.github.com/users/abid-mohaimin/repos",
+                  "events_url": "https://api.github.com/users/abid-mohaimin/events{/privacy}",
+                  "received_events_url": "https://api.github.com/users/abid-mohaimin/received_events",
+                  "type": "User",
+                  "user_view_type": "public",
+                  "site_admin": false
+                }
+              }
+            ]
+          },
+          {
+            "id": 74330997,
+            "node_id": "GA_kwDOUeLGOs4EbjN1",
+            "type": "branch_policy"
+          }
+        ],
+        "deployment_branch_policy": {
+          "protected_branches": false,
+          "custom_branch_policies": true
+        }
+      },
+      {
+        "id": 28833503717,
+        "node_id": "EN_kwDOUeLGOs8AAAAGtpxZ5Q",
+        "name": "staging",
+        "url": "https://api.github.com/repos/abid-mohaimin/acs730/environments/staging",
+        "html_url": "https://github.com/abid-mohaimin/acs730/deployments/activity_log?environments_filter=staging",
+        "created_at": "2026-11-28T07:52:21Z",
+        "updated_at": "2026-11-28T07:52:21Z",
+        "can_admins_bypass": true,
+        "protection_rules": [],
+        "deployment_branch_policy": null
+      }
+    ]
+  },
+  "prod_deployment_branch_policies": {
+    "total_count": 1,
+    "branch_policies": [
+      {
+        "id": 68598728,
+        "node_id": "MDE2OkdhdGVCcmFuY2hQb2xpY3k2ODU5ODcyOA==",
+        "name": "main",
+        "type": "branch"
+      }
+    ]
+  }
+}

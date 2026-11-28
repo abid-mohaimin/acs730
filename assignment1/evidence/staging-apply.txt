@@ -1,0 +1,664 @@
+Deploy staging	Set up job	﻿2026-11-28T08:02:32.4416294Z Current runner version: '2.338.2'
+Deploy staging	Set up job	2026-11-28T08:02:32.4433369Z ##[group]Runner Image Provisioner
+Deploy staging	Set up job	2026-11-28T08:02:32.4434069Z Hosted Compute Agent
+Deploy staging	Set up job	2026-11-28T08:02:32.4434438Z Version: 20261111.635
+Deploy staging	Set up job	2026-11-28T08:02:32.4435127Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+Deploy staging	Set up job	2026-11-28T08:02:32.4435648Z Build Date: 2026-11-11T01:49:01Z
+Deploy staging	Set up job	2026-11-28T08:02:32.4436108Z Worker ID: {3de5a37e-bf1d-4726-8fb5-b6a2c9e4a378}
+Deploy staging	Set up job	2026-11-28T08:02:32.4436576Z Region: westus2
+Deploy staging	Set up job	2026-11-28T08:02:32.4436958Z Cloud: Azure
+Deploy staging	Set up job	2026-11-28T08:02:32.4437327Z ##[endgroup]
+Deploy staging	Set up job	2026-11-28T08:02:32.4438541Z ##[group]Operating System
+Deploy staging	Set up job	2026-11-28T08:02:32.4438982Z Ubuntu
+Deploy staging	Set up job	2026-11-28T08:02:32.4439371Z 26.04.1
+Deploy staging	Set up job	2026-11-28T08:02:32.4439696Z LTS
+Deploy staging	Set up job	2026-11-28T08:02:32.4440044Z ##[endgroup]
+Deploy staging	Set up job	2026-11-28T08:02:32.4440464Z ##[group]Runner Image
+Deploy staging	Set up job	2026-11-28T08:02:32.4440838Z Image: ubuntu-26.04
+Deploy staging	Set up job	2026-11-28T08:02:32.4441243Z Version: 20261122.9.1
+Deploy staging	Set up job	2026-11-28T08:02:32.4441892Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261122.9/images/ubuntu/Ubuntu2604-Readme.md
+Deploy staging	Set up job	2026-11-28T08:02:32.4442953Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261122.9
+Deploy staging	Set up job	2026-11-28T08:02:32.4443543Z ##[endgroup]
+Deploy staging	Set up job	2026-11-28T08:02:32.4444243Z ##[group]GITHUB_TOKEN Permissions
+Deploy staging	Set up job	2026-11-28T08:02:32.4445605Z Contents: read
+Deploy staging	Set up job	2026-11-28T08:02:32.4445997Z Metadata: read
+Deploy staging	Set up job	2026-11-28T08:02:32.4446338Z ##[endgroup]
+Deploy staging	Set up job	2026-11-28T08:02:32.4447797Z Secret source: Actions
+Deploy staging	Set up job	2026-11-28T08:02:32.4448418Z Cache mode: write
+Deploy staging	Set up job	2026-11-28T08:02:32.4448879Z Prepare workflow directory
+Deploy staging	Set up job	2026-11-28T08:02:32.4693190Z Prepare all required actions
+Deploy staging	Set up job	2026-11-28T08:02:32.4723604Z Getting action download info
+Deploy staging	Set up job	2026-11-28T08:02:32.7847414Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+Deploy staging	Set up job	2026-11-28T08:02:32.8804768Z Download action repository 'aws-actions/configure-aws-credentials@v4' (SHA:7474bc4690e29a8392af63c5b98e7449536d5c3a)
+Deploy staging	Set up job	2026-11-28T08:02:33.1060692Z Download action repository 'hashicorp/setup-terraform@v3' (SHA:b9cd54a3c349d3f38e8881555d616ced269862dd)
+Deploy staging	Set up job	2026-11-28T08:02:33.3692634Z Complete job name: Deploy staging
+Deploy staging	Run actions/checkout@v4	﻿2026-11-28T08:02:33.4189235Z ##[group]Run actions/checkout@v4
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.4189670Z with:
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.4189923Z   repository: abid-mohaimin/acs730
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.4191929Z   token: ***
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.4192166Z   ssh-strict: true
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.4192415Z   ssh-user: git
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.4192671Z   persist-credentials: true
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.4192941Z   clean: true
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.4193202Z   sparse-checkout-cone-mode: true
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.4193492Z   fetch-depth: 1
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.4193735Z   fetch-tags: false
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.4193985Z   show-progress: true
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.4194242Z   lfs: false
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.4194475Z   submodules: false
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.4194728Z   set-safe-directory: true
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.4195014Z   allow-unsafe-pr-checkout: false
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.4195360Z env:
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.4195589Z   TF_IN_AUTOMATION: true
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.4195868Z   TF_VERSION: 1.10.3
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.4196116Z ##[endgroup]
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6379695Z Syncing repository: abid-mohaimin/acs730
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6381902Z ##[group]Getting Git version info
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6382539Z Working directory is '/home/runner/work/acs730/acs730'
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6383484Z [command]/usr/bin/git version
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6383945Z git version 2.56.1
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6385396Z ##[endgroup]
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6394041Z Temporarily overriding HOME='/home/runner/work/_temp/1025dc79-c1aa-49ba-93d2-65d09601e806' before making global git config changes
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6395377Z Adding repository directory to the temporary git global config as a safe directory
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6397116Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/acs730/acs730
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6471786Z Deleting the contents of '/home/runner/work/acs730/acs730'
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6474872Z ##[group]Initializing the repository
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6478805Z [command]/usr/bin/git init /home/runner/work/acs730/acs730
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6559860Z hint: Using 'master' as the name for the initial branch. This default branch name
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6560957Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6562069Z hint: to use in all of your new repositories, which will suppress this warning,
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6562930Z hint: call:
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6563597Z hint:
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6564165Z hint: 	git config --global init.defaultBranch <name>
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6564578Z hint:
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6564920Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6565440Z hint: 'development'. The just-created branch can be renamed via this command:
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6566017Z hint:
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6566273Z hint: 	git branch -m <name>
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6566548Z hint:
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6566908Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6572003Z Initialized empty Git repository in /home/runner/work/acs730/acs730/.git/
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6579451Z [command]/usr/bin/git remote add origin https://github.com/abid-mohaimin/acs730
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6629081Z ##[endgroup]
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6629823Z ##[group]Disabling automatic garbage collection
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6638292Z [command]/usr/bin/git config --local gc.auto 0
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6681665Z ##[endgroup]
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6682361Z ##[group]Setting up auth
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6686848Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.6715393Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.7119808Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.7146918Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.7362581Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.7389305Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.7604138Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.7635906Z ##[endgroup]
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.7636638Z ##[group]Fetching the repository
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:33.7642805Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +c05711df8486d52286edebd6364506a22587de4d:refs/remotes/origin/main
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:34.1600259Z From https://github.com/abid-mohaimin/acs730
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:34.1600892Z  * [new ref]         c05711df8486d52286edebd6364506a22587de4d -> origin/main
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:34.1604287Z ##[endgroup]
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:34.1604770Z ##[group]Determining the checkout info
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:34.1606093Z ##[endgroup]
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:34.1610750Z [command]/usr/bin/git sparse-checkout disable
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:34.1658152Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:34.1686957Z ##[group]Checking out the ref
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:34.1690189Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:34.1843099Z Switched to a new branch 'main'
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:34.1848423Z branch 'main' set up to track 'origin/main'.
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:34.1853779Z ##[endgroup]
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:34.1894862Z [command]/usr/bin/git log -1 --format=%H
+Deploy staging	Run actions/checkout@v4	2026-11-28T08:02:34.1916112Z c05711df8486d52286edebd6364506a22587de4d
+Deploy staging	Configure AWS credentials (staging environment secrets)	﻿2026-11-28T08:02:34.2248985Z ##[group]Run aws-actions/configure-aws-credentials@v4
+Deploy staging	Configure AWS credentials (staging environment secrets)	2026-11-28T08:02:34.2249780Z with:
+Deploy staging	Configure AWS credentials (staging environment secrets)	2026-11-28T08:02:34.2250315Z   aws-access-key-id: ***
+Deploy staging	Configure AWS credentials (staging environment secrets)	2026-11-28T08:02:34.2251160Z   aws-secret-access-key: ***
+Deploy staging	Configure AWS credentials (staging environment secrets)	2026-11-28T08:02:34.2256414Z   aws-session-token: ***
+Deploy staging	Configure AWS credentials (staging environment secrets)	2026-11-28T08:02:34.2257001Z   aws-region: us-east-1
+Deploy staging	Configure AWS credentials (staging environment secrets)	2026-11-28T08:02:34.2257592Z   audience: sts.amazonaws.com
+Deploy staging	Configure AWS credentials (staging environment secrets)	2026-11-28T08:02:34.2258041Z   output-env-credentials: true
+Deploy staging	Configure AWS credentials (staging environment secrets)	2026-11-28T08:02:34.2258643Z env:
+Deploy staging	Configure AWS credentials (staging environment secrets)	2026-11-28T08:02:34.2258987Z   TF_IN_AUTOMATION: true
+Deploy staging	Configure AWS credentials (staging environment secrets)	2026-11-28T08:02:34.2259285Z   TF_VERSION: 1.10.3
+Deploy staging	Configure AWS credentials (staging environment secrets)	2026-11-28T08:02:34.2259802Z ##[endgroup]
+Deploy staging	Configure AWS credentials (staging environment secrets)	2026-11-28T08:02:34.6441796Z Proceeding with IAM user credentials
+Deploy staging	Show who we are	﻿2026-11-28T08:02:34.6579749Z ##[group]Run aws sts get-caller-identity
+Deploy staging	Show who we are	2026-11-28T08:02:34.6580885Z ^[[36;1maws sts get-caller-identity^[[0m
+Deploy staging	Show who we are	2026-11-28T08:02:34.6612283Z shell: /usr/bin/bash -e {0}
+Deploy staging	Show who we are	2026-11-28T08:02:34.6613159Z env:
+Deploy staging	Show who we are	2026-11-28T08:02:34.6613840Z   TF_IN_AUTOMATION: true
+Deploy staging	Show who we are	2026-11-28T08:02:34.6614602Z   TF_VERSION: 1.10.3
+Deploy staging	Show who we are	2026-11-28T08:02:34.6615336Z   AWS_DEFAULT_REGION: us-east-1
+Deploy staging	Show who we are	2026-11-28T08:02:34.6616134Z   AWS_REGION: us-east-1
+Deploy staging	Show who we are	2026-11-28T08:02:34.6617098Z   AWS_ACCESS_KEY_ID: ***
+Deploy staging	Show who we are	2026-11-28T08:02:34.6618236Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy staging	Show who we are	2026-11-28T08:02:34.6629058Z   AWS_SESSION_TOKEN: ***
+Deploy staging	Show who we are	2026-11-28T08:02:34.6629763Z ##[endgroup]
+Deploy staging	Show who we are	2026-11-28T08:02:38.0185443Z {
+Deploy staging	Show who we are	2026-11-28T08:02:38.0185986Z     "UserId": "AROARBWO6SFCBLXWOG7WC:user4402589=Md_Abid",
+Deploy staging	Show who we are	2026-11-28T08:02:38.0186332Z     "Account": "072374718788",
+Deploy staging	Show who we are	2026-11-28T08:02:38.0190788Z     "Arn": "arn:aws:sts::072374718788:assumed-role/voclabs/user4402589=Md_Abid"
+Deploy staging	Show who we are	2026-11-28T08:02:38.0191167Z }
+Deploy staging	Run hashicorp/setup-terraform@v3	﻿2026-11-28T08:02:38.0799013Z ##[group]Run hashicorp/setup-terraform@v3
+Deploy staging	Run hashicorp/setup-terraform@v3	2026-11-28T08:02:38.0799349Z with:
+Deploy staging	Run hashicorp/setup-terraform@v3	2026-11-28T08:02:38.0799488Z   terraform_version: 1.10.3
+Deploy staging	Run hashicorp/setup-terraform@v3	2026-11-28T08:02:38.0799654Z   terraform_wrapper: false
+Deploy staging	Run hashicorp/setup-terraform@v3	2026-11-28T08:02:38.0799816Z   cli_config_credentials_hostname: app.terraform.io
+Deploy staging	Run hashicorp/setup-terraform@v3	2026-11-28T08:02:38.0800002Z env:
+Deploy staging	Run hashicorp/setup-terraform@v3	2026-11-28T08:02:38.0800127Z   TF_IN_AUTOMATION: true
+Deploy staging	Run hashicorp/setup-terraform@v3	2026-11-28T08:02:38.0800260Z   TF_VERSION: 1.10.3
+Deploy staging	Run hashicorp/setup-terraform@v3	2026-11-28T08:02:38.0800400Z   AWS_DEFAULT_REGION: us-east-1
+Deploy staging	Run hashicorp/setup-terraform@v3	2026-11-28T08:02:38.0800551Z   AWS_REGION: us-east-1
+Deploy staging	Run hashicorp/setup-terraform@v3	2026-11-28T08:02:38.0800851Z   AWS_ACCESS_KEY_ID: ***
+Deploy staging	Run hashicorp/setup-terraform@v3	2026-11-28T08:02:38.0801048Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy staging	Run hashicorp/setup-terraform@v3	2026-11-28T08:02:38.0803126Z   AWS_SESSION_TOKEN: ***
+Deploy staging	Run hashicorp/setup-terraform@v3	2026-11-28T08:02:38.0803267Z ##[endgroup]
+Deploy staging	Run hashicorp/setup-terraform@v3	2026-11-28T08:02:38.1662251Z (node:2706) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+Deploy staging	Run hashicorp/setup-terraform@v3	2026-11-28T08:02:38.1663000Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Deploy staging	Run hashicorp/setup-terraform@v3	2026-11-28T08:02:38.5946007Z [command]/usr/bin/unzip -o -q /home/runner/work/_temp/5753f1d8-4f39-4944-bc47-7bbc5d1b512b
+Deploy staging	terraform init (S3 backend, staging key)	﻿2026-11-28T08:02:39.0625525Z ##[group]Run terraform init -input=false
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:39.0625768Z ^[[36;1mterraform init -input=false^[[0m
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:39.0656644Z shell: /usr/bin/bash -e {0}
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:39.0656810Z env:
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:39.0656935Z   TF_IN_AUTOMATION: true
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:39.0657071Z   TF_VERSION: 1.10.3
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:39.0657224Z   AWS_DEFAULT_REGION: us-east-1
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:39.0657413Z   AWS_REGION: us-east-1
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:39.0657852Z   AWS_ACCESS_KEY_ID: ***
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:39.0658051Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:39.0660139Z   AWS_SESSION_TOKEN: ***
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:39.0660281Z ##[endgroup]
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:39.1076363Z ^[[0m^[[1mInitializing the backend...^[[0m
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:39.7899624Z ^[[0m^[[32m
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:39.7899924Z Successfully configured the backend "s3"! Terraform will automatically
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:39.7900263Z use this backend unless the backend configuration changes.^[[0m
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:39.9618469Z ^[[0m^[[1mInitializing modules...^[[0m
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:39.9633495Z - web in ../modules/web-env
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:39.9640592Z ^[[0m^[[1mInitializing provider plugins...^[[0m
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:39.9641083Z - Reusing previous version of hashicorp/aws from the dependency lock file
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:40.1964299Z - Installing hashicorp/aws v5.100.0...
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:44.9956183Z - Installed hashicorp/aws v5.100.0 (signed by HashiCorp)
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:44.9957156Z 
+Deploy staging	terraform init (S3 backend, staging key)	2026-11-28T08:02:44.9957898Z ^[[0m^[[1m^[[32mTerraform has been successfully initialized!^[[0m^[[32m^[[0m
+Deploy staging	terraform plan	﻿2026-11-28T08:02:44.9999853Z ##[group]Run terraform plan -input=false -no-color -out=tfplan
+Deploy staging	terraform plan	2026-11-28T08:02:45.0000136Z ^[[36;1mterraform plan -input=false -no-color -out=tfplan^[[0m
+Deploy staging	terraform plan	2026-11-28T08:02:45.0026743Z shell: /usr/bin/bash -e {0}
+Deploy staging	terraform plan	2026-11-28T08:02:45.0026946Z env:
+Deploy staging	terraform plan	2026-11-28T08:02:45.0027070Z   TF_IN_AUTOMATION: true
+Deploy staging	terraform plan	2026-11-28T08:02:45.0027200Z   TF_VERSION: 1.10.3
+Deploy staging	terraform plan	2026-11-28T08:02:45.0027330Z   AWS_DEFAULT_REGION: us-east-1
+Deploy staging	terraform plan	2026-11-28T08:02:45.0027624Z   AWS_REGION: us-east-1
+Deploy staging	terraform plan	2026-11-28T08:02:45.0027893Z   AWS_ACCESS_KEY_ID: ***
+Deploy staging	terraform plan	2026-11-28T08:02:45.0028080Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy staging	terraform plan	2026-11-28T08:02:45.0029976Z   AWS_SESSION_TOKEN: ***
+Deploy staging	terraform plan	2026-11-28T08:02:45.0030103Z ##[endgroup]
+Deploy staging	terraform plan	2026-11-28T08:02:47.6663444Z module.web.data.aws_ami.al2023: Reading...
+Deploy staging	terraform plan	2026-11-28T08:02:47.6663969Z module.web.data.aws_ssm_parameter.db_password: Reading...
+Deploy staging	terraform plan	2026-11-28T08:02:47.6664404Z module.web.data.aws_availability_zones.available: Reading...
+Deploy staging	terraform plan	2026-11-28T08:02:47.9775214Z module.web.data.aws_ssm_parameter.db_password: Read complete after 0s [id=/acs730/a1/staging/db_password]
+Deploy staging	terraform plan	2026-11-28T08:02:48.0322889Z module.web.data.aws_availability_zones.available: Read complete after 0s [id=us-east-1]
+Deploy staging	terraform plan	2026-11-28T08:02:48.4588040Z module.web.data.aws_ami.al2023: Read complete after 0s [id=ami-02771ddfb8e749b97]
+Deploy staging	terraform plan	2026-11-28T08:02:48.5761772Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5762512Z Terraform used the selected providers to generate the following execution
+Deploy staging	terraform plan	2026-11-28T08:02:48.5762984Z plan. Resource actions are indicated with the following symbols:
+Deploy staging	terraform plan	2026-11-28T08:02:48.5763273Z   + create
+Deploy staging	terraform plan	2026-11-28T08:02:48.5763366Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5763479Z Terraform will perform the following actions:
+Deploy staging	terraform plan	2026-11-28T08:02:48.5763695Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5763845Z   # module.web.aws_cloudwatch_metric_alarm.cpu_high will be created
+Deploy staging	terraform plan	2026-11-28T08:02:48.5764200Z   + resource "aws_cloudwatch_metric_alarm" "cpu_high" {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5764520Z       + actions_enabled                       = true
+Deploy staging	terraform plan	2026-11-28T08:02:48.5764908Z       + alarm_description                     = "Average CPU on the staging web server above 80% for 2 x 5 minutes."
+Deploy staging	terraform plan	2026-11-28T08:02:48.5765367Z       + alarm_name                            = "acs730-a1-staging-web-cpu-high"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5765692Z       + arn                                   = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5766009Z       + comparison_operator                   = "GreaterThanThreshold"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5766339Z       + dimensions                            = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5766677Z       + evaluate_low_sample_count_percentiles = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5767005Z       + evaluation_periods                    = 2
+Deploy staging	terraform plan	2026-11-28T08:02:48.5767273Z       + id                                    = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5767735Z       + metric_name                           = "CPUUtilization"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5768044Z       + namespace                             = "AWS/EC2"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5768309Z       + period                                = 300
+Deploy staging	terraform plan	2026-11-28T08:02:48.5768577Z       + statistic                             = "Average"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5768857Z       + tags                                  = {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5769106Z           + "Environment" = "staging"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5769336Z           + "ManagedBy"   = "terraform"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5769601Z           + "Name"        = "acs730-a1-staging-web-cpu-high"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5769912Z           + "Owner"       = "maamohaimin"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5770145Z         }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5770330Z       + tags_all                              = {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5770583Z           + "Assignment"  = "assignment1"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5770823Z           + "Course"      = "ACS730"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5771053Z           + "Environment" = "staging"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5771295Z           + "ManagedBy"   = "terraform"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5771996Z           + "Name"        = "acs730-a1-staging-web-cpu-high"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5772281Z           + "Owner"       = "maamohaimin"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5772516Z         }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5772962Z       + threshold                             = 80
+Deploy staging	terraform plan	2026-11-28T08:02:48.5773257Z       + treat_missing_data                    = "missing"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5773514Z     }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5773714Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5773834Z   # module.web.aws_instance.web will be created
+Deploy staging	terraform plan	2026-11-28T08:02:48.5774106Z   + resource "aws_instance" "web" {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5774389Z       + ami                                  = "ami-02771ddfb8e749b97"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5774717Z       + arn                                  = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5775066Z       + associate_public_ip_address          = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5775444Z       + availability_zone                    = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5775784Z       + cpu_core_count                       = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5776206Z       + cpu_threads_per_core                 = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5776562Z       + disable_api_stop                     = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5776917Z       + disable_api_termination              = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5777258Z       + ebs_optimized                        = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5777767Z       + enable_primary_ipv6                  = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5778085Z       + get_password_data                    = false
+Deploy staging	terraform plan	2026-11-28T08:02:48.5778399Z       + host_id                              = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5778739Z       + host_resource_group_arn              = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5779088Z       + iam_instance_profile                 = "LabInstanceProfile"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5779422Z       + id                                   = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5796431Z       + instance_initiated_shutdown_behavior = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5796887Z       + instance_lifecycle                   = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5797250Z       + instance_state                       = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5797729Z       + instance_type                        = "t3.micro"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5798039Z       + ipv6_address_count                   = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5798394Z       + ipv6_addresses                       = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5798708Z       + key_name                             = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5799023Z       + monitoring                           = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5799357Z       + outpost_arn                          = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5799688Z       + password_data                        = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5800026Z       + placement_group                      = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5800435Z       + placement_partition_number           = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5800861Z       + primary_network_interface_id         = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5801208Z       + private_dns                          = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5801545Z       + private_ip                           = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5801876Z       + public_dns                           = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5802147Z       + public_ip                            = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5802357Z       + secondary_private_ips                = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5802571Z       + security_groups                      = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5802771Z       + source_dest_check                    = true
+Deploy staging	terraform plan	2026-11-28T08:02:48.5802972Z       + spot_instance_request_id             = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5803178Z       + subnet_id                            = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5803562Z       + tags                                 = {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5803733Z           + "Environment" = "staging"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5803891Z           + "ManagedBy"   = "terraform"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5804170Z           + "Name"        = "acs730-a1-staging-web"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5804530Z           + "Owner"       = "maamohaimin"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5804764Z         }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5804961Z       + tags_all                             = {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5805233Z           + "Assignment"  = "assignment1"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5805486Z           + "Course"      = "ACS730"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5805723Z           + "Environment" = "staging"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5805926Z           + "ManagedBy"   = "terraform"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5806091Z           + "Name"        = "acs730-a1-staging-web"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5806256Z           + "Owner"       = "maamohaimin"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5806406Z         }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5806547Z       + tenancy                              = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5806782Z       + user_data                            = "52c1896ec853d5cfae68fa4ba3b4784bca8559b3"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5807024Z       + user_data_base64                     = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5807232Z       + user_data_replace_on_change          = false
+Deploy staging	terraform plan	2026-11-28T08:02:48.5807432Z       + vpc_security_group_ids               = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5807755Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5807852Z       + capacity_reservation_specification (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5807985Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5808048Z       + cpu_options (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5808156Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5808219Z       + ebs_block_device (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5808327Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5808394Z       + enclave_options (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5808507Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5808575Z       + ephemeral_block_device (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5808693Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5808766Z       + instance_market_options (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5808882Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5808955Z       + maintenance_options (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5809068Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5809126Z       + metadata_options {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5809285Z           + http_endpoint               = "enabled"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5809461Z           + http_protocol_ipv6          = "disabled"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5809652Z           + http_put_response_hop_limit = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5809850Z           + http_tokens                 = "required"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5810033Z           + instance_metadata_tags      = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5810205Z         }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5810271Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5810338Z       + network_interface (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5810444Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5810519Z       + private_dns_name_options (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5810635Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5810697Z       + root_block_device (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5810856Z     }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5810918Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5811010Z   # module.web.aws_internet_gateway.main will be created
+Deploy staging	terraform plan	2026-11-28T08:02:48.5811203Z   + resource "aws_internet_gateway" "main" {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5811375Z       + arn      = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5811531Z       + id       = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5811685Z       + owner_id = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5811835Z       + tags     = {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5811970Z           + "Environment" = "staging"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5812127Z           + "ManagedBy"   = "terraform"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5812291Z           + "Name"        = "acs730-a1-staging-igw"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5812464Z           + "Owner"       = "maamohaimin"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5812605Z         }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5812713Z       + tags_all = {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5812848Z           + "Assignment"  = "assignment1"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5813004Z           + "Course"      = "ACS730"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5813155Z           + "Environment" = "staging"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5813437Z           + "ManagedBy"   = "terraform"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5813597Z           + "Name"        = "acs730-a1-staging-igw"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5813762Z           + "Owner"       = "maamohaimin"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5813986Z         }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5814103Z       + vpc_id   = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5814245Z     }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5814306Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5814388Z   # module.web.aws_route_table.public will be created
+Deploy staging	terraform plan	2026-11-28T08:02:48.5814571Z   + resource "aws_route_table" "public" {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5814733Z       + arn              = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5814898Z       + id               = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5815063Z       + owner_id         = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5815228Z       + propagating_vgws = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5815390Z       + route            = [
+Deploy staging	terraform plan	2026-11-28T08:02:48.5815524Z           + {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5815659Z               + cidr_block                 = "0.0.0.0/0"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5815857Z               + gateway_id                 = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5816044Z                 # (11 unchanged attributes hidden)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5816206Z             },
+Deploy staging	terraform plan	2026-11-28T08:02:48.5816316Z         ]
+Deploy staging	terraform plan	2026-11-28T08:02:48.5816435Z       + tags             = {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5816574Z           + "Environment" = "staging"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5816724Z           + "ManagedBy"   = "terraform"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5816906Z           + "Name"        = "acs730-a1-staging-public-rt"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5817083Z           + "Owner"       = "maamohaimin"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5817222Z         }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5817338Z       + tags_all         = {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5817634Z           + "Assignment"  = "assignment1"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5817788Z           + "Course"      = "ACS730"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5817937Z           + "Environment" = "staging"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5818086Z           + "ManagedBy"   = "terraform"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5818261Z           + "Name"        = "acs730-a1-staging-public-rt"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5818437Z           + "Owner"       = "maamohaimin"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5818578Z         }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5818703Z       + vpc_id           = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5818852Z     }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5818914Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5819020Z   # module.web.aws_route_table_association.public["a"] will be created
+Deploy staging	terraform plan	2026-11-28T08:02:48.5819246Z   + resource "aws_route_table_association" "public" {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5819428Z       + id             = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5819595Z       + route_table_id = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5819756Z       + subnet_id      = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5819899Z     }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5819964Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5820065Z   # module.web.aws_route_table_association.public["b"] will be created
+Deploy staging	terraform plan	2026-11-28T08:02:48.5820288Z   + resource "aws_route_table_association" "public" {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5820468Z       + id             = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5820637Z       + route_table_id = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5820795Z       + subnet_id      = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5820943Z     }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5821003Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5821086Z   # module.web.aws_security_group.web will be created
+Deploy staging	terraform plan	2026-11-28T08:02:48.5821265Z   + resource "aws_security_group" "web" {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5821435Z       + arn                    = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5821652Z       + description            = "Web ingress for ACS730 Assignment 1 (staging)"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5821859Z       + egress                 = [
+Deploy staging	terraform plan	2026-11-28T08:02:48.5821998Z           + {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5822121Z               + cidr_blocks      = [
+Deploy staging	terraform plan	2026-11-28T08:02:48.5822269Z                   + "0.0.0.0/0",
+Deploy staging	terraform plan	2026-11-28T08:02:48.5822409Z                 ]
+Deploy staging	terraform plan	2026-11-28T08:02:48.5822544Z               + description      = "All outbound"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5822707Z               + from_port        = 0
+Deploy staging	terraform plan	2026-11-28T08:02:48.5822957Z               + ipv6_cidr_blocks = []
+Deploy staging	terraform plan	2026-11-28T08:02:48.5823112Z               + prefix_list_ids  = []
+Deploy staging	terraform plan	2026-11-28T08:02:48.5823280Z               + protocol         = "-1"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5823512Z               + security_groups  = []
+Deploy staging	terraform plan	2026-11-28T08:02:48.5823661Z               + self             = false
+Deploy staging	terraform plan	2026-11-28T08:02:48.5823814Z               + to_port          = 0
+Deploy staging	terraform plan	2026-11-28T08:02:48.5823950Z             },
+Deploy staging	terraform plan	2026-11-28T08:02:48.5824075Z         ]
+Deploy staging	terraform plan	2026-11-28T08:02:48.5824205Z       + id                     = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5824376Z       + ingress                = [
+Deploy staging	terraform plan	2026-11-28T08:02:48.5824513Z           + {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5824633Z               + cidr_blocks      = [
+Deploy staging	terraform plan	2026-11-28T08:02:48.5824777Z                   + "0.0.0.0/0",
+Deploy staging	terraform plan	2026-11-28T08:02:48.5824915Z                 ]
+Deploy staging	terraform plan	2026-11-28T08:02:48.5825054Z               + description      = "HTTP from anywhere"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5825221Z               + from_port        = 80
+Deploy staging	terraform plan	2026-11-28T08:02:48.5825380Z               + ipv6_cidr_blocks = []
+Deploy staging	terraform plan	2026-11-28T08:02:48.5825527Z               + prefix_list_ids  = []
+Deploy staging	terraform plan	2026-11-28T08:02:48.5825678Z               + protocol         = "tcp"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5825838Z               + security_groups  = []
+Deploy staging	terraform plan	2026-11-28T08:02:48.5825984Z               + self             = false
+Deploy staging	terraform plan	2026-11-28T08:02:48.5826134Z               + to_port          = 80
+Deploy staging	terraform plan	2026-11-28T08:02:48.5826276Z             },
+Deploy staging	terraform plan	2026-11-28T08:02:48.5826387Z         ]
+Deploy staging	terraform plan	2026-11-28T08:02:48.5826526Z       + name                   = "acs730-a1-staging-web"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5826710Z       + name_prefix            = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5826888Z       + owner_id               = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5827056Z       + revoke_rules_on_delete = false
+Deploy staging	terraform plan	2026-11-28T08:02:48.5827212Z       + tags                   = {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5827357Z           + "Environment" = "staging"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5827671Z           + "ManagedBy"   = "terraform"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5827847Z           + "Name"        = "acs730-a1-staging-web-sg"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5828026Z           + "Owner"       = "maamohaimin"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5828170Z         }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5828280Z       + tags_all               = {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5828434Z           + "Assignment"  = "assignment1"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5828586Z           + "Course"      = "ACS730"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5828730Z           + "Environment" = "staging"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5828886Z           + "ManagedBy"   = "terraform"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5829051Z           + "Name"        = "acs730-a1-staging-web-sg"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5829220Z           + "Owner"       = "maamohaimin"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5829364Z         }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5829492Z       + vpc_id                 = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5829646Z     }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5829709Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5829789Z   # module.web.aws_subnet.public["a"] will be created
+Deploy staging	terraform plan	2026-11-28T08:02:48.5829966Z   + resource "aws_subnet" "public" {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5830139Z       + arn                                            = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5830357Z       + assign_ipv6_address_on_creation                = false
+Deploy staging	terraform plan	2026-11-28T08:02:48.5830576Z       + availability_zone                              = "us-east-1a"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5830810Z       + availability_zone_id                           = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5831043Z       + cidr_block                                     = "10.41.1.0/24"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5831248Z       + enable_dns64                                   = false
+Deploy staging	terraform plan	2026-11-28T08:02:48.5831452Z       + enable_resource_name_dns_a_record_on_launch    = false
+Deploy staging	terraform plan	2026-11-28T08:02:48.5831669Z       + enable_resource_name_dns_aaaa_record_on_launch = false
+Deploy staging	terraform plan	2026-11-28T08:02:48.5831870Z       + id                                             = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5832092Z       + ipv6_cidr_block_association_id                 = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5832317Z       + ipv6_native                                    = false
+Deploy staging	terraform plan	2026-11-28T08:02:48.5832608Z       + map_public_ip_on_launch                        = true
+Deploy staging	terraform plan	2026-11-28T08:02:48.5832813Z       + owner_id                                       = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5833132Z       + private_dns_hostname_type_on_launch            = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5833349Z       + tags                                           = {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5833518Z           + "Environment" = "staging"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5833671Z           + "ManagedBy"   = "terraform"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5833843Z           + "Name"        = "acs730-a1-staging-public-a"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5834019Z           + "Owner"       = "maamohaimin"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5834165Z         }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5834292Z       + tags_all                                       = {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5834459Z           + "Assignment"  = "assignment1"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5834612Z           + "Course"      = "ACS730"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5834764Z           + "Environment" = "staging"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5834917Z           + "ManagedBy"   = "terraform"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5835087Z           + "Name"        = "acs730-a1-staging-public-a"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5835257Z           + "Owner"       = "maamohaimin"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5835401Z         }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5835541Z       + vpc_id                                         = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5835720Z     }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5835775Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5835857Z   # module.web.aws_subnet.public["b"] will be created
+Deploy staging	terraform plan	2026-11-28T08:02:48.5836034Z   + resource "aws_subnet" "public" {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5836239Z       + arn                                            = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5836446Z       + assign_ipv6_address_on_creation                = false
+Deploy staging	terraform plan	2026-11-28T08:02:48.5836656Z       + availability_zone                              = "us-east-1b"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5836889Z       + availability_zone_id                           = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5837118Z       + cidr_block                                     = "10.41.2.0/24"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5837316Z       + enable_dns64                                   = false
+Deploy staging	terraform plan	2026-11-28T08:02:48.5837695Z       + enable_resource_name_dns_a_record_on_launch    = false
+Deploy staging	terraform plan	2026-11-28T08:02:48.5837909Z       + enable_resource_name_dns_aaaa_record_on_launch = false
+Deploy staging	terraform plan	2026-11-28T08:02:48.5838110Z       + id                                             = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5838331Z       + ipv6_cidr_block_association_id                 = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5838557Z       + ipv6_native                                    = false
+Deploy staging	terraform plan	2026-11-28T08:02:48.5838749Z       + map_public_ip_on_launch                        = true
+Deploy staging	terraform plan	2026-11-28T08:02:48.5838950Z       + owner_id                                       = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5839182Z       + private_dns_hostname_type_on_launch            = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5839393Z       + tags                                           = {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5839559Z           + "Environment" = "staging"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5839713Z           + "ManagedBy"   = "terraform"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5839879Z           + "Name"        = "acs730-a1-staging-public-b"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5840053Z           + "Owner"       = "maamohaimin"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5840200Z         }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5840325Z       + tags_all                                       = {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5840492Z           + "Assignment"  = "assignment1"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5840645Z           + "Course"      = "ACS730"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5840803Z           + "Environment" = "staging"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5840950Z           + "ManagedBy"   = "terraform"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5841119Z           + "Name"        = "acs730-a1-staging-public-b"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5841292Z           + "Owner"       = "maamohaimin"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5841433Z         }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5841573Z       + vpc_id                                         = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5841848Z     }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5841907Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5841975Z   # module.web.aws_vpc.main will be created
+Deploy staging	terraform plan	2026-11-28T08:02:48.5842139Z   + resource "aws_vpc" "main" {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5842429Z       + arn                                  = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5842626Z       + cidr_block                           = "10.41.0.0/16"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5842833Z       + default_network_acl_id               = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5843055Z       + default_route_table_id               = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5843270Z       + default_security_group_id            = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5843479Z       + dhcp_options_id                      = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5843672Z       + enable_dns_hostnames                 = true
+Deploy staging	terraform plan	2026-11-28T08:02:48.5843851Z       + enable_dns_support                   = true
+Deploy staging	terraform plan	2026-11-28T08:02:48.5844048Z       + enable_network_address_usage_metrics = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5844259Z       + id                                   = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5844447Z       + instance_tenancy                     = "default"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5844648Z       + ipv6_association_id                  = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5844855Z       + ipv6_cidr_block                      = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5845058Z       + ipv6_cidr_block_network_border_group = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5845266Z       + main_route_table_id                  = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5845472Z       + owner_id                             = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5845651Z       + tags                                 = {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5845810Z           + "Environment" = "staging"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5845963Z           + "ManagedBy"   = "terraform"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5846120Z           + "Name"        = "acs730-a1-staging-vpc"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5846286Z           + "Owner"       = "maamohaimin"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5846437Z         }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5846558Z       + tags_all                             = {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5846719Z           + "Assignment"  = "assignment1"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5846882Z           + "Course"      = "ACS730"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5847032Z           + "Environment" = "staging"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5847184Z           + "ManagedBy"   = "terraform"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5847347Z           + "Name"        = "acs730-a1-staging-vpc"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5847601Z           + "Owner"       = "maamohaimin"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5847744Z         }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5847849Z     }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5847910Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5847980Z Plan: 10 to add, 0 to change, 0 to destroy.
+Deploy staging	terraform plan	2026-11-28T08:02:48.5848086Z 
+Deploy staging	terraform plan	2026-11-28T08:02:48.5848142Z Changes to Outputs:
+Deploy staging	terraform plan	2026-11-28T08:02:48.5848304Z   + cpu_alarm_name        = "acs730-a1-staging-web-cpu-high"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5848504Z   + db_password_parameter = {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5848663Z       + name    = "/acs730/a1/staging/db_password"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5848841Z       + type    = "SecureString"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5848986Z       + version = 1
+Deploy staging	terraform plan	2026-11-28T08:02:48.5849103Z     }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5849214Z   + environment           = "staging"
+Deploy staging	terraform plan	2026-11-28T08:02:48.5849369Z   + subnet_ids            = {
+Deploy staging	terraform plan	2026-11-28T08:02:48.5849510Z       + a = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5849652Z       + b = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5849790Z     }
+Deploy staging	terraform plan	2026-11-28T08:02:48.5849916Z   + vpc_id                = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5850089Z   + web_instance_id       = (known after apply)
+Deploy staging	terraform plan	2026-11-28T08:02:48.5850262Z   + web_url               = (known after apply)
+Deploy staging	terraform apply	﻿2026-11-28T08:02:48.7695004Z ##[group]Run terraform apply -input=false -no-color -auto-approve tfplan
+Deploy staging	terraform apply	2026-11-28T08:02:48.7695503Z ^[[36;1mterraform apply -input=false -no-color -auto-approve tfplan^[[0m
+Deploy staging	terraform apply	2026-11-28T08:02:48.7733313Z shell: /usr/bin/bash -e {0}
+Deploy staging	terraform apply	2026-11-28T08:02:48.7733584Z env:
+Deploy staging	terraform apply	2026-11-28T08:02:48.7733777Z   TF_IN_AUTOMATION: true
+Deploy staging	terraform apply	2026-11-28T08:02:48.7734165Z   TF_VERSION: 1.10.3
+Deploy staging	terraform apply	2026-11-28T08:02:48.7734381Z   AWS_DEFAULT_REGION: us-east-1
+Deploy staging	terraform apply	2026-11-28T08:02:48.7734621Z   AWS_REGION: us-east-1
+Deploy staging	terraform apply	2026-11-28T08:02:48.7735105Z   AWS_ACCESS_KEY_ID: ***
+Deploy staging	terraform apply	2026-11-28T08:02:48.7735431Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy staging	terraform apply	2026-11-28T08:02:48.7739130Z   AWS_SESSION_TOKEN: ***
+Deploy staging	terraform apply	2026-11-28T08:02:48.7739374Z ##[endgroup]
+Deploy staging	terraform apply	2026-11-28T08:02:51.2782193Z module.web.aws_vpc.main: Creating...
+Deploy staging	terraform apply	2026-11-28T08:03:01.2791745Z module.web.aws_vpc.main: Still creating... [10s elapsed]
+Deploy staging	terraform apply	2026-11-28T08:03:04.0654360Z module.web.aws_vpc.main: Creation complete after 13s [id=vpc-0ac97f26fe11741a0]
+Deploy staging	terraform apply	2026-11-28T08:03:04.0718420Z module.web.aws_subnet.public["a"]: Creating...
+Deploy staging	terraform apply	2026-11-28T08:03:04.0778169Z module.web.aws_internet_gateway.main: Creating...
+Deploy staging	terraform apply	2026-11-28T08:03:04.0808143Z module.web.aws_security_group.web: Creating...
+Deploy staging	terraform apply	2026-11-28T08:03:04.0849174Z module.web.aws_subnet.public["b"]: Creating...
+Deploy staging	terraform apply	2026-11-28T08:03:04.9768935Z module.web.aws_internet_gateway.main: Creation complete after 1s [id=igw-088c176a33acdaf35]
+Deploy staging	terraform apply	2026-11-28T08:03:04.9793048Z module.web.aws_route_table.public: Creating...
+Deploy staging	terraform apply	2026-11-28T08:03:06.2804557Z module.web.aws_route_table.public: Creation complete after 1s [id=rtb-015f0212981da85c5]
+Deploy staging	terraform apply	2026-11-28T08:03:07.5037012Z module.web.aws_security_group.web: Creation complete after 4s [id=sg-0158b3e20c5aed826]
+Deploy staging	terraform apply	2026-11-28T08:03:14.0721319Z module.web.aws_subnet.public["a"]: Still creating... [10s elapsed]
+Deploy staging	terraform apply	2026-11-28T08:03:14.0741517Z module.web.aws_subnet.public["b"]: Still creating... [10s elapsed]
+Deploy staging	terraform apply	2026-11-28T08:03:15.2431425Z module.web.aws_subnet.public["a"]: Creation complete after 11s [id=subnet-0cc9c805db0b5aad6]
+Deploy staging	terraform apply	2026-11-28T08:03:15.7911765Z module.web.aws_subnet.public["b"]: Creation complete after 12s [id=subnet-08f2843cbf70612fe]
+Deploy staging	terraform apply	2026-11-28T08:03:15.7930051Z module.web.aws_route_table_association.public["a"]: Creating...
+Deploy staging	terraform apply	2026-11-28T08:03:15.7930492Z module.web.aws_route_table_association.public["b"]: Creating...
+Deploy staging	terraform apply	2026-11-28T08:03:16.2778243Z module.web.aws_route_table_association.public["b"]: Creation complete after 0s [id=rtbassoc-0556658a8c399bbe2]
+Deploy staging	terraform apply	2026-11-28T08:03:16.3362584Z module.web.aws_route_table_association.public["a"]: Creation complete after 0s [id=rtbassoc-035441f6323d96cba]
+Deploy staging	terraform apply	2026-11-28T08:03:16.3411058Z module.web.aws_instance.web: Creating...
+Deploy staging	terraform apply	2026-11-28T08:03:26.3422820Z module.web.aws_instance.web: Still creating... [10s elapsed]
+Deploy staging	terraform apply	2026-11-28T08:03:29.7953342Z module.web.aws_instance.web: Creation complete after 14s [id=i-04e06304cd078088e]
+Deploy staging	terraform apply	2026-11-28T08:03:30.2210454Z module.web.aws_cloudwatch_metric_alarm.cpu_high: Creating...
+Deploy staging	terraform apply	2026-11-28T08:03:30.8306978Z module.web.aws_cloudwatch_metric_alarm.cpu_high: Creation complete after 1s [id=acs730-a1-staging-web-cpu-high]
+Deploy staging	terraform apply	2026-11-28T08:03:31.1819331Z 
+Deploy staging	terraform apply	2026-11-28T08:03:31.1820235Z Apply complete! Resources: 10 added, 0 changed, 0 destroyed.
+Deploy staging	terraform apply	2026-11-28T08:03:31.1820519Z 
+Deploy staging	terraform apply	2026-11-28T08:03:31.1820593Z Outputs:
+Deploy staging	terraform apply	2026-11-28T08:03:31.1820698Z 
+Deploy staging	terraform apply	2026-11-28T08:03:31.1820965Z cpu_alarm_name = "acs730-a1-staging-web-cpu-high"
+Deploy staging	terraform apply	2026-11-28T08:03:31.1821355Z db_password_parameter = {
+Deploy staging	terraform apply	2026-11-28T08:03:31.1821632Z   "name" = "/acs730/a1/staging/db_password"
+Deploy staging	terraform apply	2026-11-28T08:03:31.1821940Z   "type" = "SecureString"
+Deploy staging	terraform apply	2026-11-28T08:03:31.1822188Z   "version" = 1
+Deploy staging	terraform apply	2026-11-28T08:03:31.1822441Z }
+Deploy staging	terraform apply	2026-11-28T08:03:31.1822628Z environment = "staging"
+Deploy staging	terraform apply	2026-11-28T08:03:31.1822870Z subnet_ids = {
+Deploy staging	terraform apply	2026-11-28T08:03:31.1823083Z   "a" = "subnet-0cc9c805db0b5aad6"
+Deploy staging	terraform apply	2026-11-28T08:03:31.1823374Z   "b" = "subnet-08f2843cbf70612fe"
+Deploy staging	terraform apply	2026-11-28T08:03:31.1823632Z }
+Deploy staging	terraform apply	2026-11-28T08:03:31.1824018Z vpc_id = "vpc-0ac97f26fe11741a0"
+Deploy staging	terraform apply	2026-11-28T08:03:31.1824258Z web_instance_id = "i-04e06304cd078088e"
+Deploy staging	terraform apply	2026-11-28T08:03:31.1824546Z web_url = "http://98.83.217.199/"
+Deploy staging	terraform output	﻿2026-11-28T08:03:31.1950625Z ##[group]Run terraform output -no-color
+Deploy staging	terraform output	2026-11-28T08:03:31.1950850Z ^[[36;1mterraform output -no-color^[[0m
+Deploy staging	terraform output	2026-11-28T08:03:31.1977862Z shell: /usr/bin/bash -e {0}
+Deploy staging	terraform output	2026-11-28T08:03:31.1978078Z env:
+Deploy staging	terraform output	2026-11-28T08:03:31.1978246Z   TF_IN_AUTOMATION: true
+Deploy staging	terraform output	2026-11-28T08:03:31.1978383Z   TF_VERSION: 1.10.3
+Deploy staging	terraform output	2026-11-28T08:03:31.1978662Z   AWS_DEFAULT_REGION: us-east-1
+Deploy staging	terraform output	2026-11-28T08:03:31.1978814Z   AWS_REGION: us-east-1
+Deploy staging	terraform output	2026-11-28T08:03:31.1979063Z   AWS_ACCESS_KEY_ID: ***
+Deploy staging	terraform output	2026-11-28T08:03:31.1979251Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy staging	terraform output	2026-11-28T08:03:31.1981241Z   AWS_SESSION_TOKEN: ***
+Deploy staging	terraform output	2026-11-28T08:03:31.1981373Z ##[endgroup]
+Deploy staging	terraform output	2026-11-28T08:03:32.4490393Z cpu_alarm_name = "acs730-a1-staging-web-cpu-high"
+Deploy staging	terraform output	2026-11-28T08:03:32.4490691Z db_password_parameter = {
+Deploy staging	terraform output	2026-11-28T08:03:32.4490851Z   "name" = "/acs730/a1/staging/db_password"
+Deploy staging	terraform output	2026-11-28T08:03:32.4491023Z   "type" = "SecureString"
+Deploy staging	terraform output	2026-11-28T08:03:32.4491160Z   "version" = 1
+Deploy staging	terraform output	2026-11-28T08:03:32.4491278Z }
+Deploy staging	terraform output	2026-11-28T08:03:32.4491400Z environment = "staging"
+Deploy staging	terraform output	2026-11-28T08:03:32.4491606Z subnet_ids = {
+Deploy staging	terraform output	2026-11-28T08:03:32.4491739Z   "a" = "subnet-0cc9c805db0b5aad6"
+Deploy staging	terraform output	2026-11-28T08:03:32.4491900Z   "b" = "subnet-08f2843cbf70612fe"
+Deploy staging	terraform output	2026-11-28T08:03:32.4492045Z }
+Deploy staging	terraform output	2026-11-28T08:03:32.4492161Z vpc_id = "vpc-0ac97f26fe11741a0"
+Deploy staging	terraform output	2026-11-28T08:03:32.4492314Z web_instance_id = "i-04e06304cd078088e"
+Deploy staging	terraform output	2026-11-28T08:03:32.4492503Z web_url = "http://98.83.217.199/"
+Deploy staging	Post Configure AWS credentials (staging environment secrets)	﻿2026-11-28T08:03:32.4571578Z Post job cleanup.
+Deploy staging	Post Run actions/checkout@v4	﻿2026-11-28T08:03:32.5313438Z Post job cleanup.
+Deploy staging	Post Run actions/checkout@v4	2026-11-28T08:03:32.5935188Z [command]/usr/bin/git version
+Deploy staging	Post Run actions/checkout@v4	2026-11-28T08:03:32.5971230Z git version 2.56.1
+Deploy staging	Post Run actions/checkout@v4	2026-11-28T08:03:32.5997363Z Temporarily overriding HOME='/home/runner/work/_temp/22e4fa65-ce92-476b-8f02-d030e0c909a0' before making global git config changes
+Deploy staging	Post Run actions/checkout@v4	2026-11-28T08:03:32.5998313Z Adding repository directory to the temporary git global config as a safe directory
+Deploy staging	Post Run actions/checkout@v4	2026-11-28T08:03:32.6008049Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/acs730/acs730
+Deploy staging	Post Run actions/checkout@v4	2026-11-28T08:03:32.6040530Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Deploy staging	Post Run actions/checkout@v4	2026-11-28T08:03:32.6071638Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Deploy staging	Post Run actions/checkout@v4	2026-11-28T08:03:32.6345303Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Deploy staging	Post Run actions/checkout@v4	2026-11-28T08:03:32.6370484Z http.https://github.com/.extraheader
+Deploy staging	Post Run actions/checkout@v4	2026-11-28T08:03:32.6379920Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Deploy staging	Post Run actions/checkout@v4	2026-11-28T08:03:32.6414042Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Deploy staging	Post Run actions/checkout@v4	2026-11-28T08:03:32.6668195Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Deploy staging	Post Run actions/checkout@v4	2026-11-28T08:03:32.6697668Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Deploy staging	Complete job	﻿2026-11-28T08:03:32.7033713Z Cleaning up orphan processes
+Deploy staging	Complete job	2026-11-28T08:03:32.7298032Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, aws-actions/configure-aws-credentials@v4, hashicorp/setup-terraform@v3. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
