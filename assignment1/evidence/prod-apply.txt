@@ -1,0 +1,666 @@
+Deploy prod	Set up job	﻿2026-11-28T08:15:24.1822245Z Current runner version: '2.338.2'
+Deploy prod	Set up job	2026-11-28T08:15:24.1840288Z ##[group]Runner Image Provisioner
+Deploy prod	Set up job	2026-11-28T08:15:24.1841086Z Hosted Compute Agent
+Deploy prod	Set up job	2026-11-28T08:15:24.1841570Z Version: 20261111.635
+Deploy prod	Set up job	2026-11-28T08:15:24.1842019Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+Deploy prod	Set up job	2026-11-28T08:15:24.1842848Z Build Date: 2026-11-11T01:49:01Z
+Deploy prod	Set up job	2026-11-28T08:15:24.1843400Z Worker ID: {f75d3641-9753-4ad3-b8cd-6c9441817c47}
+Deploy prod	Set up job	2026-11-28T08:15:24.1843938Z Region: us-west-2
+Deploy prod	Set up job	2026-11-28T08:15:24.1844363Z Cloud: AWS
+Deploy prod	Set up job	2026-11-28T08:15:24.1844865Z ##[endgroup]
+Deploy prod	Set up job	2026-11-28T08:15:24.1845955Z ##[group]Operating System
+Deploy prod	Set up job	2026-11-28T08:15:24.1846751Z Ubuntu
+Deploy prod	Set up job	2026-11-28T08:15:24.1847206Z 26.04.1
+Deploy prod	Set up job	2026-11-28T08:15:24.1847590Z LTS
+Deploy prod	Set up job	2026-11-28T08:15:24.1847983Z ##[endgroup]
+Deploy prod	Set up job	2026-11-28T08:15:24.1848407Z ##[group]Runner Image
+Deploy prod	Set up job	2026-11-28T08:15:24.1849033Z Image: ubuntu-26.04
+Deploy prod	Set up job	2026-11-28T08:15:24.1849518Z Version: 20261122.9.1
+Deploy prod	Set up job	2026-11-28T08:15:24.1850306Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261122.9/images/ubuntu/Ubuntu2604-Readme.md
+Deploy prod	Set up job	2026-11-28T08:15:24.1851640Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261122.9
+Deploy prod	Set up job	2026-11-28T08:15:24.1852386Z ##[endgroup]
+Deploy prod	Set up job	2026-11-28T08:15:24.1853229Z ##[group]GITHUB_TOKEN Permissions
+Deploy prod	Set up job	2026-11-28T08:15:24.1854991Z Contents: read
+Deploy prod	Set up job	2026-11-28T08:15:24.1855523Z Metadata: read
+Deploy prod	Set up job	2026-11-28T08:15:24.1855921Z ##[endgroup]
+Deploy prod	Set up job	2026-11-28T08:15:24.1857792Z Secret source: Actions
+Deploy prod	Set up job	2026-11-28T08:15:24.1858487Z Cache mode: write
+Deploy prod	Set up job	2026-11-28T08:15:24.1859067Z Prepare workflow directory
+Deploy prod	Set up job	2026-11-28T08:15:24.2141476Z Prepare all required actions
+Deploy prod	Set up job	2026-11-28T08:15:24.2177811Z Getting action download info
+Deploy prod	Set up job	2026-11-28T08:15:24.6037974Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+Deploy prod	Set up job	2026-11-28T08:15:26.0703156Z Download action repository 'aws-actions/configure-aws-credentials@v4' (SHA:7474bc4690e29a8392af63c5b98e7449536d5c3a)
+Deploy prod	Set up job	2026-11-28T08:15:26.4047881Z Download action repository 'hashicorp/setup-terraform@v3' (SHA:b9cd54a3c349d3f38e8881555d616ced269862dd)
+Deploy prod	Set up job	2026-11-28T08:15:26.7440783Z Complete job name: Deploy prod
+Deploy prod	Run actions/checkout@v4	﻿2026-11-28T08:15:26.8023675Z ##[group]Run actions/checkout@v4
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:26.8024234Z with:
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:26.8024506Z   repository: abid-mohaimin/acs730
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:26.8026628Z   token: ***
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:26.8026931Z   ssh-strict: true
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:26.8027207Z   ssh-user: git
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:26.8027492Z   persist-credentials: true
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:26.8027769Z   clean: true
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:26.8028073Z   sparse-checkout-cone-mode: true
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:26.8028384Z   fetch-depth: 1
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:26.8028626Z   fetch-tags: false
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:26.8028939Z   show-progress: true
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:26.8029198Z   lfs: false
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:26.8029474Z   submodules: false
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:26.8029736Z   set-safe-directory: true
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:26.8030050Z   allow-unsafe-pr-checkout: false
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:26.8030491Z env:
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:26.8030737Z   TF_IN_AUTOMATION: true
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:26.8031056Z   TF_VERSION: 1.10.3
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:26.8031343Z ##[endgroup]
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:29.9516670Z Syncing repository: abid-mohaimin/acs730
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:29.9518210Z ##[group]Getting Git version info
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:29.9518550Z Working directory is '/home/runner/work/acs730/acs730'
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:29.9519268Z [command]/usr/bin/git version
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:29.9531414Z git version 2.56.1
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:29.9544768Z ##[endgroup]
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:29.9554456Z Temporarily overriding HOME='/home/runner/work/_temp/9f50f077-1139-4033-ab36-6631c972bdc7' before making global git config changes
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:29.9555438Z Adding repository directory to the temporary git global config as a safe directory
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:29.9558650Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/acs730/acs730
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:29.9976457Z Deleting the contents of '/home/runner/work/acs730/acs730'
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:29.9999984Z ##[group]Initializing the repository
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0003324Z [command]/usr/bin/git init /home/runner/work/acs730/acs730
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0754233Z hint: Using 'master' as the name for the initial branch. This default branch name
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0754822Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0755379Z hint: to use in all of your new repositories, which will suppress this warning,
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0755778Z hint: call:
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0756166Z hint:
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0756557Z hint: 	git config --global init.defaultBranch <name>
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0756890Z hint:
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0757191Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0757619Z hint: 'development'. The just-created branch can be renamed via this command:
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0757956Z hint:
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0758186Z hint: 	git branch -m <name>
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0758458Z hint:
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0758872Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0779108Z Initialized empty Git repository in /home/runner/work/acs730/acs730/.git/
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0786486Z [command]/usr/bin/git remote add origin https://github.com/abid-mohaimin/acs730
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0848693Z ##[endgroup]
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0849271Z ##[group]Disabling automatic garbage collection
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0851568Z [command]/usr/bin/git config --local gc.auto 0
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0872420Z ##[endgroup]
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0872936Z ##[group]Setting up auth
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0878302Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.0899756Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.6304335Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.6329391Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.6510589Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.6533340Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.6704238Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.6730452Z ##[endgroup]
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.6736599Z ##[group]Fetching the repository
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:30.6737281Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +c05711df8486d52286edebd6364506a22587de4d:refs/remotes/origin/main
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:31.3723236Z From https://github.com/abid-mohaimin/acs730
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:31.3723859Z  * [new ref]         c05711df8486d52286edebd6364506a22587de4d -> origin/main
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:31.3727903Z ##[endgroup]
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:31.3728550Z ##[group]Determining the checkout info
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:31.3729715Z ##[endgroup]
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:31.3734780Z [command]/usr/bin/git sparse-checkout disable
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:31.3781157Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:31.3805039Z ##[group]Checking out the ref
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:31.3807849Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:31.3941009Z Switched to a new branch 'main'
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:31.3949314Z branch 'main' set up to track 'origin/main'.
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:31.3954406Z ##[endgroup]
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:31.3996782Z [command]/usr/bin/git log -1 --format=%H
+Deploy prod	Run actions/checkout@v4	2026-11-28T08:15:31.4013213Z c05711df8486d52286edebd6364506a22587de4d
+Deploy prod	Configure AWS credentials (prod environment secrets)	﻿2026-11-28T08:15:31.4222127Z ##[group]Run aws-actions/configure-aws-credentials@v4
+Deploy prod	Configure AWS credentials (prod environment secrets)	2026-11-28T08:15:31.4222472Z with:
+Deploy prod	Configure AWS credentials (prod environment secrets)	2026-11-28T08:15:31.4222910Z   aws-access-key-id: ***
+Deploy prod	Configure AWS credentials (prod environment secrets)	2026-11-28T08:15:31.4223371Z   aws-secret-access-key: ***
+Deploy prod	Configure AWS credentials (prod environment secrets)	2026-11-28T08:15:31.4226251Z   aws-session-token: ***
+Deploy prod	Configure AWS credentials (prod environment secrets)	2026-11-28T08:15:31.4226554Z   aws-region: us-east-1
+Deploy prod	Configure AWS credentials (prod environment secrets)	2026-11-28T08:15:31.4226889Z   audience: sts.amazonaws.com
+Deploy prod	Configure AWS credentials (prod environment secrets)	2026-11-28T08:15:31.4227199Z   output-env-credentials: true
+Deploy prod	Configure AWS credentials (prod environment secrets)	2026-11-28T08:15:31.4227488Z env:
+Deploy prod	Configure AWS credentials (prod environment secrets)	2026-11-28T08:15:31.4227698Z   TF_IN_AUTOMATION: true
+Deploy prod	Configure AWS credentials (prod environment secrets)	2026-11-28T08:15:31.4227960Z   TF_VERSION: 1.10.3
+Deploy prod	Configure AWS credentials (prod environment secrets)	2026-11-28T08:15:31.4228208Z ##[endgroup]
+Deploy prod	Configure AWS credentials (prod environment secrets)	2026-11-28T08:15:31.9686207Z Proceeding with IAM user credentials
+Deploy prod	Show who we are	﻿2026-11-28T08:15:31.9784445Z ##[group]Run aws sts get-caller-identity
+Deploy prod	Show who we are	2026-11-28T08:15:31.9784872Z ^[[36;1maws sts get-caller-identity^[[0m
+Deploy prod	Show who we are	2026-11-28T08:15:32.4499786Z shell: /usr/bin/bash -e {0}
+Deploy prod	Show who we are	2026-11-28T08:15:32.4500168Z env:
+Deploy prod	Show who we are	2026-11-28T08:15:32.4500482Z   TF_IN_AUTOMATION: true
+Deploy prod	Show who we are	2026-11-28T08:15:32.4500727Z   TF_VERSION: 1.10.3
+Deploy prod	Show who we are	2026-11-28T08:15:32.4500969Z   AWS_DEFAULT_REGION: us-east-1
+Deploy prod	Show who we are	2026-11-28T08:15:32.4501295Z   AWS_REGION: us-east-1
+Deploy prod	Show who we are	2026-11-28T08:15:32.4501852Z   AWS_ACCESS_KEY_ID: ***
+Deploy prod	Show who we are	2026-11-28T08:15:32.4502242Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy prod	Show who we are	2026-11-28T08:15:32.4504897Z   AWS_SESSION_TOKEN: ***
+Deploy prod	Show who we are	2026-11-28T08:15:32.4505151Z ##[endgroup]
+Deploy prod	Show who we are	2026-11-28T08:15:36.7224653Z {
+Deploy prod	Show who we are	2026-11-28T08:15:36.7225483Z     "UserId": "AROARBWO6SFCBLXWOG7WC:user4402589=Md_Abid",
+Deploy prod	Show who we are	2026-11-28T08:15:36.7226145Z     "Account": "072374718788",
+Deploy prod	Show who we are	2026-11-28T08:15:36.7233519Z     "Arn": "arn:aws:sts::072374718788:assumed-role/voclabs/user4402589=Md_Abid"
+Deploy prod	Show who we are	2026-11-28T08:15:36.7234116Z }
+Deploy prod	Run hashicorp/setup-terraform@v3	﻿2026-11-28T08:15:36.8037456Z ##[group]Run hashicorp/setup-terraform@v3
+Deploy prod	Run hashicorp/setup-terraform@v3	2026-11-28T08:15:36.8037752Z with:
+Deploy prod	Run hashicorp/setup-terraform@v3	2026-11-28T08:15:36.8037961Z   terraform_version: 1.10.3
+Deploy prod	Run hashicorp/setup-terraform@v3	2026-11-28T08:15:36.8038543Z   terraform_wrapper: false
+Deploy prod	Run hashicorp/setup-terraform@v3	2026-11-28T08:15:36.8038817Z   cli_config_credentials_hostname: app.terraform.io
+Deploy prod	Run hashicorp/setup-terraform@v3	2026-11-28T08:15:36.8039112Z env:
+Deploy prod	Run hashicorp/setup-terraform@v3	2026-11-28T08:15:36.8039339Z   TF_IN_AUTOMATION: true
+Deploy prod	Run hashicorp/setup-terraform@v3	2026-11-28T08:15:36.8039554Z   TF_VERSION: 1.10.3
+Deploy prod	Run hashicorp/setup-terraform@v3	2026-11-28T08:15:36.8039810Z   AWS_DEFAULT_REGION: us-east-1
+Deploy prod	Run hashicorp/setup-terraform@v3	2026-11-28T08:15:36.8040087Z   AWS_REGION: us-east-1
+Deploy prod	Run hashicorp/setup-terraform@v3	2026-11-28T08:15:36.8040486Z   AWS_ACCESS_KEY_ID: ***
+Deploy prod	Run hashicorp/setup-terraform@v3	2026-11-28T08:15:36.8040779Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy prod	Run hashicorp/setup-terraform@v3	2026-11-28T08:15:36.8043424Z   AWS_SESSION_TOKEN: ***
+Deploy prod	Run hashicorp/setup-terraform@v3	2026-11-28T08:15:36.8043652Z ##[endgroup]
+Deploy prod	Run hashicorp/setup-terraform@v3	2026-11-28T08:15:36.9398824Z (node:2385) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+Deploy prod	Run hashicorp/setup-terraform@v3	2026-11-28T08:15:36.9400042Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Deploy prod	Run hashicorp/setup-terraform@v3	2026-11-28T08:15:37.1389957Z [command]/usr/bin/unzip -o -q /home/runner/work/_temp/fb6d13b2-9739-4e12-b3a2-d0084c30f74f
+Deploy prod	terraform init (S3 backend, prod key)	﻿2026-11-28T08:15:37.6859599Z ##[group]Run terraform init -input=false
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:37.6859961Z ^[[36;1mterraform init -input=false^[[0m
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:37.6892041Z shell: /usr/bin/bash -e {0}
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:37.6892435Z env:
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:37.6892663Z   TF_IN_AUTOMATION: true
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:37.6892971Z   TF_VERSION: 1.10.3
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:37.6893233Z   AWS_DEFAULT_REGION: us-east-1
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:37.6893473Z   AWS_REGION: us-east-1
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:37.6893894Z   AWS_ACCESS_KEY_ID: ***
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:37.6894215Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:37.6897075Z   AWS_SESSION_TOKEN: ***
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:37.6897324Z ##[endgroup]
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:37.8205923Z ^[[0m^[[1mInitializing the backend...^[[0m
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:38.3636267Z ^[[0m^[[32m
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:38.3637007Z Successfully configured the backend "s3"! Terraform will automatically
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:38.3637498Z use this backend unless the backend configuration changes.^[[0m
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:38.5084667Z ^[[0m^[[1mInitializing modules...^[[0m
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:38.5101799Z - web in ../modules/web-env
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:38.5109050Z ^[[0m^[[1mInitializing provider plugins...^[[0m
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:38.5109867Z - Reusing previous version of hashicorp/aws from the dependency lock file
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:38.6641502Z - Installing hashicorp/aws v5.100.0...
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:44.0931006Z - Installed hashicorp/aws v5.100.0 (signed by HashiCorp)
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:44.0943034Z 
+Deploy prod	terraform init (S3 backend, prod key)	2026-11-28T08:15:44.0944109Z ^[[0m^[[1m^[[32mTerraform has been successfully initialized!^[[0m^[[32m^[[0m
+Deploy prod	terraform plan	﻿2026-11-28T08:15:44.0987137Z ##[group]Run terraform plan -input=false -no-color -out=tfplan
+Deploy prod	terraform plan	2026-11-28T08:15:44.0987852Z ^[[36;1mterraform plan -input=false -no-color -out=tfplan^[[0m
+Deploy prod	terraform plan	2026-11-28T08:15:44.1031441Z shell: /usr/bin/bash -e {0}
+Deploy prod	terraform plan	2026-11-28T08:15:44.1031855Z env:
+Deploy prod	terraform plan	2026-11-28T08:15:44.1032222Z   TF_IN_AUTOMATION: true
+Deploy prod	terraform plan	2026-11-28T08:15:44.1032549Z   TF_VERSION: 1.10.3
+Deploy prod	terraform plan	2026-11-28T08:15:44.1032979Z   AWS_DEFAULT_REGION: us-east-1
+Deploy prod	terraform plan	2026-11-28T08:15:44.1033341Z   AWS_REGION: us-east-1
+Deploy prod	terraform plan	2026-11-28T08:15:44.1033786Z   AWS_ACCESS_KEY_ID: ***
+Deploy prod	terraform plan	2026-11-28T08:15:44.1034286Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy prod	terraform plan	2026-11-28T08:15:44.1038921Z   AWS_SESSION_TOKEN: ***
+Deploy prod	terraform plan	2026-11-28T08:15:44.1039376Z ##[endgroup]
+Deploy prod	terraform plan	2026-11-28T08:15:46.8557018Z module.web.data.aws_ami.al2023: Reading...
+Deploy prod	terraform plan	2026-11-28T08:15:46.8558042Z module.web.data.aws_availability_zones.available: Reading...
+Deploy prod	terraform plan	2026-11-28T08:15:46.8559187Z module.web.data.aws_ssm_parameter.db_password: Reading...
+Deploy prod	terraform plan	2026-11-28T08:15:47.1639637Z module.web.data.aws_availability_zones.available: Read complete after 0s [id=us-east-1]
+Deploy prod	terraform plan	2026-11-28T08:15:47.1672223Z module.web.data.aws_ssm_parameter.db_password: Read complete after 0s [id=/acs730/a1/prod/db_password]
+Deploy prod	terraform plan	2026-11-28T08:15:47.6141000Z module.web.data.aws_ami.al2023: Read complete after 1s [id=ami-02771ddfb8e749b97]
+Deploy prod	terraform plan	2026-11-28T08:15:47.7438484Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7439420Z Terraform used the selected providers to generate the following execution
+Deploy prod	terraform plan	2026-11-28T08:15:47.7440090Z plan. Resource actions are indicated with the following symbols:
+Deploy prod	terraform plan	2026-11-28T08:15:47.7440852Z   + create
+Deploy prod	terraform plan	2026-11-28T08:15:47.7441049Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7442981Z Terraform will perform the following actions:
+Deploy prod	terraform plan	2026-11-28T08:15:47.7443302Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7443685Z   # module.web.aws_cloudwatch_metric_alarm.cpu_high will be created
+Deploy prod	terraform plan	2026-11-28T08:15:47.7444225Z   + resource "aws_cloudwatch_metric_alarm" "cpu_high" {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7444787Z       + actions_enabled                       = true
+Deploy prod	terraform plan	2026-11-28T08:15:47.7445323Z       + alarm_description                     = "Average CPU on the prod web server above 70% for 2 x 5 minutes."
+Deploy prod	terraform plan	2026-11-28T08:15:47.7446136Z       + alarm_name                            = "acs730-a1-prod-web-cpu-high"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7446742Z       + arn                                   = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7447243Z       + comparison_operator                   = "GreaterThanThreshold"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7447856Z       + dimensions                            = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7448394Z       + evaluate_low_sample_count_percentiles = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7448871Z       + evaluation_periods                    = 2
+Deploy prod	terraform plan	2026-11-28T08:15:47.7449335Z       + id                                    = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7449774Z       + metric_name                           = "CPUUtilization"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7450208Z       + namespace                             = "AWS/EC2"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7450621Z       + period                                = 300
+Deploy prod	terraform plan	2026-11-28T08:15:47.7450927Z       + statistic                             = "Average"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7451229Z       + tags                                  = {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7451609Z           + "Environment" = "prod"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7451990Z           + "ManagedBy"   = "terraform"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7452349Z           + "Name"        = "acs730-a1-prod-web-cpu-high"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7452800Z           + "Owner"       = "maamohaimin"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7453269Z         }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7453700Z       + tags_all                              = {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7454200Z           + "Assignment"  = "assignment1"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7454564Z           + "Course"      = "ACS730"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7454981Z           + "Environment" = "prod"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7455351Z           + "ManagedBy"   = "terraform"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7456255Z           + "Name"        = "acs730-a1-prod-web-cpu-high"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7456730Z           + "Owner"       = "maamohaimin"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7457040Z         }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7457667Z       + threshold                             = 70
+Deploy prod	terraform plan	2026-11-28T08:15:47.7458232Z       + treat_missing_data                    = "missing"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7458599Z     }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7458850Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7459067Z   # module.web.aws_instance.web will be created
+Deploy prod	terraform plan	2026-11-28T08:15:47.7459438Z   + resource "aws_instance" "web" {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7459873Z       + ami                                  = "ami-02771ddfb8e749b97"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7460272Z       + arn                                  = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7460700Z       + associate_public_ip_address          = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7461138Z       + availability_zone                    = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7461566Z       + cpu_core_count                       = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7461971Z       + cpu_threads_per_core                 = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7462426Z       + disable_api_stop                     = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7462832Z       + disable_api_termination              = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7463270Z       + ebs_optimized                        = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7463685Z       + enable_primary_ipv6                  = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7464086Z       + get_password_data                    = false
+Deploy prod	terraform plan	2026-11-28T08:15:47.7464520Z       + host_id                              = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7464913Z       + host_resource_group_arn              = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7465366Z       + iam_instance_profile                 = "LabInstanceProfile"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7465759Z       + id                                   = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7466514Z       + instance_initiated_shutdown_behavior = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7467047Z       + instance_lifecycle                   = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7467926Z       + instance_state                       = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7468525Z       + instance_type                        = "t3.small"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7468976Z       + ipv6_address_count                   = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7469482Z       + ipv6_addresses                       = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7469878Z       + key_name                             = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7470312Z       + monitoring                           = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7470708Z       + outpost_arn                          = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7471083Z       + password_data                        = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7471426Z       + placement_group                      = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7471776Z       + placement_partition_number           = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7472140Z       + primary_network_interface_id         = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7472472Z       + private_dns                          = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7472852Z       + private_ip                           = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7473171Z       + public_dns                           = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7473566Z       + public_ip                            = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7473929Z       + secondary_private_ips                = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7474271Z       + security_groups                      = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7474602Z       + source_dest_check                    = true
+Deploy prod	terraform plan	2026-11-28T08:15:47.7474934Z       + spot_instance_request_id             = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7475270Z       + subnet_id                            = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7475708Z       + tags                                 = {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7476178Z           + "Environment" = "prod"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7476462Z           + "ManagedBy"   = "terraform"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7476820Z           + "Name"        = "acs730-a1-prod-web"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7477129Z           + "Owner"       = "maamohaimin"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7477394Z         }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7477611Z       + tags_all                             = {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7477920Z           + "Assignment"  = "assignment1"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7478173Z           + "Course"      = "ACS730"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7478466Z           + "Environment" = "prod"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7478744Z           + "ManagedBy"   = "terraform"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7479015Z           + "Name"        = "acs730-a1-prod-web"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7479330Z           + "Owner"       = "maamohaimin"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7479607Z         }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7479874Z       + tenancy                              = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7480240Z       + user_data                            = "41f6c6ecf0dccab8d8d0a68077accea4c2de84b2"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7480644Z       + user_data_base64                     = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7480971Z       + user_data_replace_on_change          = false
+Deploy prod	terraform plan	2026-11-28T08:15:47.7481287Z       + vpc_security_group_ids               = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7481533Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7481700Z       + capacity_reservation_specification (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7481918Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7482003Z       + cpu_options (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7482202Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7482331Z       + ebs_block_device (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7482548Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7482649Z       + enclave_options (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7482834Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7482992Z       + ephemeral_block_device (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7483158Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7483298Z       + instance_market_options (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7483481Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7483606Z       + maintenance_options (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7483806Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7483924Z       + metadata_options {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7484172Z           + http_endpoint               = "enabled"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7484495Z           + http_protocol_ipv6          = "disabled"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7484834Z           + http_put_response_hop_limit = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7485151Z           + http_tokens                 = "required"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7485454Z           + instance_metadata_tags      = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7485773Z         }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7485882Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7486166Z       + network_interface (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7486375Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7486491Z       + private_dns_name_options (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7486695Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7486840Z       + root_block_device (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7487101Z     }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7487221Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7487423Z   # module.web.aws_internet_gateway.main will be created
+Deploy prod	terraform plan	2026-11-28T08:15:47.7487827Z   + resource "aws_internet_gateway" "main" {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7488105Z       + arn      = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7488429Z       + id       = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7488704Z       + owner_id = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7488996Z       + tags     = {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7489267Z           + "Environment" = "prod"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7489600Z           + "ManagedBy"   = "terraform"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7489882Z           + "Name"        = "acs730-a1-prod-igw"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7490175Z           + "Owner"       = "maamohaimin"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7490452Z         }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7490656Z       + tags_all = {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7490886Z           + "Assignment"  = "assignment1"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7491188Z           + "Course"      = "ACS730"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7491448Z           + "Environment" = "prod"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7491818Z           + "ManagedBy"   = "terraform"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7492116Z           + "Name"        = "acs730-a1-prod-igw"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7492400Z           + "Owner"       = "maamohaimin"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7492715Z         }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7492963Z       + vpc_id   = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7493222Z     }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7493344Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7493468Z   # module.web.aws_route_table.public will be created
+Deploy prod	terraform plan	2026-11-28T08:15:47.7493803Z   + resource "aws_route_table" "public" {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7494089Z       + arn              = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7494358Z       + id               = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7494662Z       + owner_id         = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7494924Z       + propagating_vgws = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7495226Z       + route            = [
+Deploy prod	terraform plan	2026-11-28T08:15:47.7495484Z           + {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7495727Z               + cidr_block                 = "0.0.0.0/0"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7496194Z               + gateway_id                 = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7496546Z                 # (11 unchanged attributes hidden)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7496838Z             },
+Deploy prod	terraform plan	2026-11-28T08:15:47.7497043Z         ]
+Deploy prod	terraform plan	2026-11-28T08:15:47.7497285Z       + tags             = {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7497528Z           + "Environment" = "prod"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7497779Z           + "ManagedBy"   = "terraform"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7498110Z           + "Name"        = "acs730-a1-prod-public-rt"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7498382Z           + "Owner"       = "maamohaimin"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7498645Z         }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7498872Z       + tags_all         = {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7499139Z           + "Assignment"  = "assignment1"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7499394Z           + "Course"      = "ACS730"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7499681Z           + "Environment" = "prod"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7499990Z           + "ManagedBy"   = "terraform"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7500269Z           + "Name"        = "acs730-a1-prod-public-rt"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7500606Z           + "Owner"       = "maamohaimin"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7500847Z         }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7501062Z       + vpc_id           = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7501350Z     }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7501445Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7501610Z   # module.web.aws_route_table_association.public["a"] will be created
+Deploy prod	terraform plan	2026-11-28T08:15:47.7502003Z   + resource "aws_route_table_association" "public" {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7502320Z       + id             = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7502606Z       + route_table_id = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7502875Z       + subnet_id      = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7503169Z     }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7503274Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7503448Z   # module.web.aws_route_table_association.public["b"] will be created
+Deploy prod	terraform plan	2026-11-28T08:15:47.7503800Z   + resource "aws_route_table_association" "public" {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7504129Z       + id             = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7504401Z       + route_table_id = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7504678Z       + subnet_id      = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7504961Z     }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7505060Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7505195Z   # module.web.aws_security_group.web will be created
+Deploy prod	terraform plan	2026-11-28T08:15:47.7505508Z   + resource "aws_security_group" "web" {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7505830Z       + arn                    = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7506332Z       + description            = "Web ingress for ACS730 Assignment 1 (prod)"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7506667Z       + egress                 = [
+Deploy prod	terraform plan	2026-11-28T08:15:47.7506935Z           + {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7507170Z               + cidr_blocks      = [
+Deploy prod	terraform plan	2026-11-28T08:15:47.7507439Z                   + "0.0.0.0/0",
+Deploy prod	terraform plan	2026-11-28T08:15:47.7507703Z                 ]
+Deploy prod	terraform plan	2026-11-28T08:15:47.7507939Z               + description      = "All outbound"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7508204Z               + from_port        = 0
+Deploy prod	terraform plan	2026-11-28T08:15:47.7508489Z               + ipv6_cidr_blocks = []
+Deploy prod	terraform plan	2026-11-28T08:15:47.7508845Z               + prefix_list_ids  = []
+Deploy prod	terraform plan	2026-11-28T08:15:47.7509159Z               + protocol         = "-1"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7509450Z               + security_groups  = []
+Deploy prod	terraform plan	2026-11-28T08:15:47.7509775Z               + self             = false
+Deploy prod	terraform plan	2026-11-28T08:15:47.7510040Z               + to_port          = 0
+Deploy prod	terraform plan	2026-11-28T08:15:47.7510306Z             },
+Deploy prod	terraform plan	2026-11-28T08:15:47.7510566Z         ]
+Deploy prod	terraform plan	2026-11-28T08:15:47.7510786Z       + id                     = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7511104Z       + ingress                = [
+Deploy prod	terraform plan	2026-11-28T08:15:47.7511335Z           + {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7511550Z               + cidr_blocks      = [
+Deploy prod	terraform plan	2026-11-28T08:15:47.7511827Z                   + "0.0.0.0/0",
+Deploy prod	terraform plan	2026-11-28T08:15:47.7512040Z                 ]
+Deploy prod	terraform plan	2026-11-28T08:15:47.7512314Z               + description      = "HTTP from anywhere"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7512589Z               + from_port        = 80
+Deploy prod	terraform plan	2026-11-28T08:15:47.7512874Z               + ipv6_cidr_blocks = []
+Deploy prod	terraform plan	2026-11-28T08:15:47.7513125Z               + prefix_list_ids  = []
+Deploy prod	terraform plan	2026-11-28T08:15:47.7513400Z               + protocol         = "tcp"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7513681Z               + security_groups  = []
+Deploy prod	terraform plan	2026-11-28T08:15:47.7513929Z               + self             = false
+Deploy prod	terraform plan	2026-11-28T08:15:47.7514186Z               + to_port          = 80
+Deploy prod	terraform plan	2026-11-28T08:15:47.7514444Z             },
+Deploy prod	terraform plan	2026-11-28T08:15:47.7514706Z         ]
+Deploy prod	terraform plan	2026-11-28T08:15:47.7514968Z       + name                   = "acs730-a1-prod-web"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7515285Z       + name_prefix            = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7515598Z       + owner_id               = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7515876Z       + revoke_rules_on_delete = false
+Deploy prod	terraform plan	2026-11-28T08:15:47.7516353Z       + tags                   = {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7516600Z           + "Environment" = "prod"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7516840Z           + "ManagedBy"   = "terraform"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7517160Z           + "Name"        = "acs730-a1-prod-web-sg"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7517442Z           + "Owner"       = "maamohaimin"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7517707Z         }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7517942Z       + tags_all               = {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7518188Z           + "Assignment"  = "assignment1"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7518454Z           + "Course"      = "ACS730"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7518714Z           + "Environment" = "prod"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7518998Z           + "ManagedBy"   = "terraform"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7519267Z           + "Name"        = "acs730-a1-prod-web-sg"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7519615Z           + "Owner"       = "maamohaimin"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7519881Z         }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7520117Z       + vpc_id                 = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7520381Z     }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7520501Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7520636Z   # module.web.aws_subnet.public["a"] will be created
+Deploy prod	terraform plan	2026-11-28T08:15:47.7520947Z   + resource "aws_subnet" "public" {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7521232Z       + arn                                            = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7521619Z       + assign_ipv6_address_on_creation                = false
+Deploy prod	terraform plan	2026-11-28T08:15:47.7521954Z       + availability_zone                              = "us-east-1a"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7522310Z       + availability_zone_id                           = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7522708Z       + cidr_block                                     = "10.42.1.0/24"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7523054Z       + enable_dns64                                   = false
+Deploy prod	terraform plan	2026-11-28T08:15:47.7523384Z       + enable_resource_name_dns_a_record_on_launch    = false
+Deploy prod	terraform plan	2026-11-28T08:15:47.7523740Z       + enable_resource_name_dns_aaaa_record_on_launch = false
+Deploy prod	terraform plan	2026-11-28T08:15:47.7524060Z       + id                                             = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7524417Z       + ipv6_cidr_block_association_id                 = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7524797Z       + ipv6_native                                    = false
+Deploy prod	terraform plan	2026-11-28T08:15:47.7525144Z       + map_public_ip_on_launch                        = true
+Deploy prod	terraform plan	2026-11-28T08:15:47.7525556Z       + owner_id                                       = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7526107Z       + private_dns_hostname_type_on_launch            = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7526559Z       + tags                                           = {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7526878Z           + "Environment" = "prod"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7527141Z           + "ManagedBy"   = "terraform"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7527419Z           + "Name"        = "acs730-a1-prod-public-a"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7527837Z           + "Owner"       = "maamohaimin"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7528094Z         }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7528332Z       + tags_all                                       = {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7528629Z           + "Assignment"  = "assignment1"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7528907Z           + "Course"      = "ACS730"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7529205Z           + "Environment" = "prod"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7529468Z           + "ManagedBy"   = "terraform"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7529791Z           + "Name"        = "acs730-a1-prod-public-a"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7530073Z           + "Owner"       = "maamohaimin"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7530315Z         }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7530629Z       + vpc_id                                         = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7530922Z     }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7531044Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7531176Z   # module.web.aws_subnet.public["b"] will be created
+Deploy prod	terraform plan	2026-11-28T08:15:47.7531537Z   + resource "aws_subnet" "public" {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7531824Z       + arn                                            = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7532167Z       + assign_ipv6_address_on_creation                = false
+Deploy prod	terraform plan	2026-11-28T08:15:47.7532514Z       + availability_zone                              = "us-east-1b"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7532890Z       + availability_zone_id                           = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7533264Z       + cidr_block                                     = "10.42.2.0/24"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7533614Z       + enable_dns64                                   = false
+Deploy prod	terraform plan	2026-11-28T08:15:47.7533939Z       + enable_resource_name_dns_a_record_on_launch    = false
+Deploy prod	terraform plan	2026-11-28T08:15:47.7534295Z       + enable_resource_name_dns_aaaa_record_on_launch = false
+Deploy prod	terraform plan	2026-11-28T08:15:47.7534627Z       + id                                             = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7534978Z       + ipv6_cidr_block_association_id                 = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7535375Z       + ipv6_native                                    = false
+Deploy prod	terraform plan	2026-11-28T08:15:47.7535686Z       + map_public_ip_on_launch                        = true
+Deploy prod	terraform plan	2026-11-28T08:15:47.7536150Z       + owner_id                                       = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7536564Z       + private_dns_hostname_type_on_launch            = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7536896Z       + tags                                           = {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7537217Z           + "Environment" = "prod"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7537509Z           + "ManagedBy"   = "terraform"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7537800Z           + "Name"        = "acs730-a1-prod-public-b"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7538081Z           + "Owner"       = "maamohaimin"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7538374Z         }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7538613Z       + tags_all                                       = {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7538893Z           + "Assignment"  = "assignment1"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7539196Z           + "Course"      = "ACS730"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7539454Z           + "Environment" = "prod"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7539718Z           + "ManagedBy"   = "terraform"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7540031Z           + "Name"        = "acs730-a1-prod-public-b"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7540296Z           + "Owner"       = "maamohaimin"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7540569Z         }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7540851Z       + vpc_id                                         = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7541143Z     }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7541270Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7541373Z   # module.web.aws_vpc.main will be created
+Deploy prod	terraform plan	2026-11-28T08:15:47.7541787Z   + resource "aws_vpc" "main" {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7542073Z       + arn                                  = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7542451Z       + cidr_block                           = "10.42.0.0/16"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7542811Z       + default_network_acl_id               = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7543150Z       + default_route_table_id               = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7543492Z       + default_security_group_id            = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7543884Z       + dhcp_options_id                      = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7544180Z       + enable_dns_hostnames                 = true
+Deploy prod	terraform plan	2026-11-28T08:15:47.7544489Z       + enable_dns_support                   = true
+Deploy prod	terraform plan	2026-11-28T08:15:47.7544830Z       + enable_network_address_usage_metrics = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7545163Z       + id                                   = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7545484Z       + instance_tenancy                     = "default"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7545824Z       + ipv6_association_id                  = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7546300Z       + ipv6_cidr_block                      = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7546659Z       + ipv6_cidr_block_network_border_group = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7547046Z       + main_route_table_id                  = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7547370Z       + owner_id                             = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7547710Z       + tags                                 = {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7547981Z           + "Environment" = "prod"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7548229Z           + "ManagedBy"   = "terraform"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7548567Z           + "Name"        = "acs730-a1-prod-vpc"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7548840Z           + "Owner"       = "maamohaimin"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7549101Z         }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7549342Z       + tags_all                             = {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7549613Z           + "Assignment"  = "assignment1"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7549901Z           + "Course"      = "ACS730"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7550167Z           + "Environment" = "prod"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7550438Z           + "ManagedBy"   = "terraform"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7550704Z           + "Name"        = "acs730-a1-prod-vpc"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7551028Z           + "Owner"       = "maamohaimin"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7551273Z         }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7551456Z     }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7551606Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7551735Z Plan: 10 to add, 0 to change, 0 to destroy.
+Deploy prod	terraform plan	2026-11-28T08:15:47.7551893Z 
+Deploy prod	terraform plan	2026-11-28T08:15:47.7552006Z Changes to Outputs:
+Deploy prod	terraform plan	2026-11-28T08:15:47.7552305Z   + cpu_alarm_name        = "acs730-a1-prod-web-cpu-high"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7552637Z   + db_password_parameter = {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7552898Z       + name    = "/acs730/a1/prod/db_password"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7553175Z       + type    = "SecureString"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7553428Z       + version = 1
+Deploy prod	terraform plan	2026-11-28T08:15:47.7553678Z     }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7553888Z   + environment           = "prod"
+Deploy prod	terraform plan	2026-11-28T08:15:47.7554136Z   + subnet_ids            = {
+Deploy prod	terraform plan	2026-11-28T08:15:47.7554417Z       + a = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7554668Z       + b = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7554924Z     }
+Deploy prod	terraform plan	2026-11-28T08:15:47.7555177Z   + vpc_id                = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7555476Z   + web_instance_id       = (known after apply)
+Deploy prod	terraform plan	2026-11-28T08:15:47.7555757Z   + web_url               = (known after apply)
+Deploy prod	terraform apply	﻿2026-11-28T08:15:47.9180838Z ##[group]Run terraform apply -input=false -no-color -auto-approve tfplan
+Deploy prod	terraform apply	2026-11-28T08:15:47.9181368Z ^[[36;1mterraform apply -input=false -no-color -auto-approve tfplan^[[0m
+Deploy prod	terraform apply	2026-11-28T08:15:47.9212247Z shell: /usr/bin/bash -e {0}
+Deploy prod	terraform apply	2026-11-28T08:15:47.9212625Z env:
+Deploy prod	terraform apply	2026-11-28T08:15:47.9212879Z   TF_IN_AUTOMATION: true
+Deploy prod	terraform apply	2026-11-28T08:15:47.9213150Z   TF_VERSION: 1.10.3
+Deploy prod	terraform apply	2026-11-28T08:15:47.9213383Z   AWS_DEFAULT_REGION: us-east-1
+Deploy prod	terraform apply	2026-11-28T08:15:47.9213781Z   AWS_REGION: us-east-1
+Deploy prod	terraform apply	2026-11-28T08:15:47.9214140Z   AWS_ACCESS_KEY_ID: ***
+Deploy prod	terraform apply	2026-11-28T08:15:47.9214467Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy prod	terraform apply	2026-11-28T08:15:47.9217256Z   AWS_SESSION_TOKEN: ***
+Deploy prod	terraform apply	2026-11-28T08:15:47.9217531Z ##[endgroup]
+Deploy prod	terraform apply	2026-11-28T08:15:50.3717226Z module.web.aws_vpc.main: Creating...
+Deploy prod	terraform apply	2026-11-28T08:16:00.3723304Z module.web.aws_vpc.main: Still creating... [10s elapsed]
+Deploy prod	terraform apply	2026-11-28T08:16:02.7552372Z module.web.aws_vpc.main: Creation complete after 13s [id=vpc-0a6a284c58829a7cc]
+Deploy prod	terraform apply	2026-11-28T08:16:02.7586446Z module.web.aws_subnet.public["a"]: Creating...
+Deploy prod	terraform apply	2026-11-28T08:16:02.7593631Z module.web.aws_internet_gateway.main: Creating...
+Deploy prod	terraform apply	2026-11-28T08:16:02.7594191Z module.web.aws_subnet.public["b"]: Creating...
+Deploy prod	terraform apply	2026-11-28T08:16:02.7605238Z module.web.aws_security_group.web: Creating...
+Deploy prod	terraform apply	2026-11-28T08:16:03.4850306Z module.web.aws_internet_gateway.main: Creation complete after 0s [id=igw-058517d69adae1b6b]
+Deploy prod	terraform apply	2026-11-28T08:16:03.4878007Z module.web.aws_route_table.public: Creating...
+Deploy prod	terraform apply	2026-11-28T08:16:04.7827735Z module.web.aws_route_table.public: Creation complete after 2s [id=rtb-07fe71b695982046f]
+Deploy prod	terraform apply	2026-11-28T08:16:06.0865854Z module.web.aws_security_group.web: Creation complete after 3s [id=sg-02c9e75cecfb24926]
+Deploy prod	terraform apply	2026-11-28T08:16:12.7611453Z module.web.aws_subnet.public["b"]: Still creating... [10s elapsed]
+Deploy prod	terraform apply	2026-11-28T08:16:12.7612212Z module.web.aws_subnet.public["a"]: Still creating... [10s elapsed]
+Deploy prod	terraform apply	2026-11-28T08:16:14.2668362Z module.web.aws_subnet.public["a"]: Creation complete after 11s [id=subnet-0168eda121da88a56]
+Deploy prod	terraform apply	2026-11-28T08:16:16.4449715Z module.web.aws_subnet.public["b"]: Creation complete after 13s [id=subnet-0f340866efe19b1c9]
+Deploy prod	terraform apply	2026-11-28T08:16:16.4470540Z module.web.aws_route_table_association.public["b"]: Creating...
+Deploy prod	terraform apply	2026-11-28T08:16:16.4471327Z module.web.aws_route_table_association.public["a"]: Creating...
+Deploy prod	terraform apply	2026-11-28T08:16:16.9050708Z module.web.aws_route_table_association.public["b"]: Creation complete after 1s [id=rtbassoc-080746fb0afb0ef07]
+Deploy prod	terraform apply	2026-11-28T08:16:16.9670916Z module.web.aws_route_table_association.public["a"]: Creation complete after 1s [id=rtbassoc-008d9c231cca5e5cb]
+Deploy prod	terraform apply	2026-11-28T08:16:16.9728326Z module.web.aws_instance.web: Creating...
+Deploy prod	terraform apply	2026-11-28T08:16:26.9743807Z module.web.aws_instance.web: Still creating... [10s elapsed]
+Deploy prod	terraform apply	2026-11-28T08:16:36.9755916Z module.web.aws_instance.web: Still creating... [20s elapsed]
+Deploy prod	terraform apply	2026-11-28T08:16:46.9759803Z module.web.aws_instance.web: Still creating... [30s elapsed]
+Deploy prod	terraform apply	2026-11-28T08:16:49.7935941Z module.web.aws_instance.web: Creation complete after 33s [id=i-00bf3ade192f749ad]
+Deploy prod	terraform apply	2026-11-28T08:16:50.1786890Z module.web.aws_cloudwatch_metric_alarm.cpu_high: Creating...
+Deploy prod	terraform apply	2026-11-28T08:16:50.7090436Z module.web.aws_cloudwatch_metric_alarm.cpu_high: Creation complete after 1s [id=acs730-a1-prod-web-cpu-high]
+Deploy prod	terraform apply	2026-11-28T08:16:51.0382075Z 
+Deploy prod	terraform apply	2026-11-28T08:16:51.0382676Z Apply complete! Resources: 10 added, 0 changed, 0 destroyed.
+Deploy prod	terraform apply	2026-11-28T08:16:51.0382979Z 
+Deploy prod	terraform apply	2026-11-28T08:16:51.0383050Z Outputs:
+Deploy prod	terraform apply	2026-11-28T08:16:51.0383311Z 
+Deploy prod	terraform apply	2026-11-28T08:16:51.0383471Z cpu_alarm_name = "acs730-a1-prod-web-cpu-high"
+Deploy prod	terraform apply	2026-11-28T08:16:51.0383816Z db_password_parameter = {
+Deploy prod	terraform apply	2026-11-28T08:16:51.0384196Z   "name" = "/acs730/a1/prod/db_password"
+Deploy prod	terraform apply	2026-11-28T08:16:51.0384569Z   "type" = "SecureString"
+Deploy prod	terraform apply	2026-11-28T08:16:51.0384876Z   "version" = 1
+Deploy prod	terraform apply	2026-11-28T08:16:51.0385122Z }
+Deploy prod	terraform apply	2026-11-28T08:16:51.0385370Z environment = "prod"
+Deploy prod	terraform apply	2026-11-28T08:16:51.0385672Z subnet_ids = {
+Deploy prod	terraform apply	2026-11-28T08:16:51.0385921Z   "a" = "subnet-0168eda121da88a56"
+Deploy prod	terraform apply	2026-11-28T08:16:51.0386488Z   "b" = "subnet-0f340866efe19b1c9"
+Deploy prod	terraform apply	2026-11-28T08:16:51.0386817Z }
+Deploy prod	terraform apply	2026-11-28T08:16:51.0387776Z vpc_id = "vpc-0a6a284c58829a7cc"
+Deploy prod	terraform apply	2026-11-28T08:16:51.0388127Z web_instance_id = "i-00bf3ade192f749ad"
+Deploy prod	terraform apply	2026-11-28T08:16:51.0388554Z web_url = "http://98.93.139.34/"
+Deploy prod	terraform output	﻿2026-11-28T08:16:51.0465124Z ##[group]Run terraform output -no-color
+Deploy prod	terraform output	2026-11-28T08:16:51.0465521Z ^[[36;1mterraform output -no-color^[[0m
+Deploy prod	terraform output	2026-11-28T08:16:51.0494356Z shell: /usr/bin/bash -e {0}
+Deploy prod	terraform output	2026-11-28T08:16:51.0494668Z env:
+Deploy prod	terraform output	2026-11-28T08:16:51.0494904Z   TF_IN_AUTOMATION: true
+Deploy prod	terraform output	2026-11-28T08:16:51.0495399Z   TF_VERSION: 1.10.3
+Deploy prod	terraform output	2026-11-28T08:16:51.0495669Z   AWS_DEFAULT_REGION: us-east-1
+Deploy prod	terraform output	2026-11-28T08:16:51.0495934Z   AWS_REGION: us-east-1
+Deploy prod	terraform output	2026-11-28T08:16:51.0496427Z   AWS_ACCESS_KEY_ID: ***
+Deploy prod	terraform output	2026-11-28T08:16:51.0496787Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy prod	terraform output	2026-11-28T08:16:51.0499406Z   AWS_SESSION_TOKEN: ***
+Deploy prod	terraform output	2026-11-28T08:16:51.0499675Z ##[endgroup]
+Deploy prod	terraform output	2026-11-28T08:16:52.3030826Z cpu_alarm_name = "acs730-a1-prod-web-cpu-high"
+Deploy prod	terraform output	2026-11-28T08:16:52.3031689Z db_password_parameter = {
+Deploy prod	terraform output	2026-11-28T08:16:52.3032169Z   "name" = "/acs730/a1/prod/db_password"
+Deploy prod	terraform output	2026-11-28T08:16:52.3032622Z   "type" = "SecureString"
+Deploy prod	terraform output	2026-11-28T08:16:52.3033390Z   "version" = 1
+Deploy prod	terraform output	2026-11-28T08:16:52.3033684Z }
+Deploy prod	terraform output	2026-11-28T08:16:52.3034019Z environment = "prod"
+Deploy prod	terraform output	2026-11-28T08:16:52.3034518Z subnet_ids = {
+Deploy prod	terraform output	2026-11-28T08:16:52.3034807Z   "a" = "subnet-0168eda121da88a56"
+Deploy prod	terraform output	2026-11-28T08:16:52.3035076Z   "b" = "subnet-0f340866efe19b1c9"
+Deploy prod	terraform output	2026-11-28T08:16:52.3035348Z }
+Deploy prod	terraform output	2026-11-28T08:16:52.3035556Z vpc_id = "vpc-0a6a284c58829a7cc"
+Deploy prod	terraform output	2026-11-28T08:16:52.3035824Z web_instance_id = "i-00bf3ade192f749ad"
+Deploy prod	terraform output	2026-11-28T08:16:52.3036370Z web_url = "http://98.93.139.34/"
+Deploy prod	Post Configure AWS credentials (prod environment secrets)	﻿2026-11-28T08:16:52.3124755Z Post job cleanup.
+Deploy prod	Post Run actions/checkout@v4	﻿2026-11-28T08:16:52.3953891Z Post job cleanup.
+Deploy prod	Post Run actions/checkout@v4	2026-11-28T08:16:52.4625664Z [command]/usr/bin/git version
+Deploy prod	Post Run actions/checkout@v4	2026-11-28T08:16:52.4653484Z git version 2.56.1
+Deploy prod	Post Run actions/checkout@v4	2026-11-28T08:16:52.4677943Z Temporarily overriding HOME='/home/runner/work/_temp/a2b18c9f-8de9-4ab2-82df-22651ffd67bd' before making global git config changes
+Deploy prod	Post Run actions/checkout@v4	2026-11-28T08:16:52.4678967Z Adding repository directory to the temporary git global config as a safe directory
+Deploy prod	Post Run actions/checkout@v4	2026-11-28T08:16:52.4682007Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/acs730/acs730
+Deploy prod	Post Run actions/checkout@v4	2026-11-28T08:16:52.4709963Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Deploy prod	Post Run actions/checkout@v4	2026-11-28T08:16:52.4733115Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Deploy prod	Post Run actions/checkout@v4	2026-11-28T08:16:52.4925555Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Deploy prod	Post Run actions/checkout@v4	2026-11-28T08:16:52.4951027Z http.https://github.com/.extraheader
+Deploy prod	Post Run actions/checkout@v4	2026-11-28T08:16:52.4953472Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Deploy prod	Post Run actions/checkout@v4	2026-11-28T08:16:52.4975407Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Deploy prod	Post Run actions/checkout@v4	2026-11-28T08:16:52.5289407Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Deploy prod	Post Run actions/checkout@v4	2026-11-28T08:16:52.5326884Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Deploy prod	Complete job	﻿2026-11-28T08:16:52.5602763Z Cleaning up orphan processes
+Deploy prod	Complete job	2026-11-28T08:16:52.5840526Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, aws-actions/configure-aws-credentials@v4, hashicorp/setup-terraform@v3. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

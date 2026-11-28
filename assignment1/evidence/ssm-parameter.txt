@@ -1,0 +1,22 @@
+== Parameter metadata (value NOT decrypted)
+------------------------------------------------------
+|                    GetParameter                    |
++---------------+------------------------------------+
+|  LastModified |  2026-11-28T07:38:47.354000+00:00  |
+|  Name         |  /acs730/a1/prod/db_password       |
+|  Type         |  SecureString                      |
+|  Version      |  1                                 |
++---------------+------------------------------------+
+
+== Terraform state: the data source that reads it
+module.web.data.aws_ssm_parameter.db_password
+
+== Terraform output (metadata only)
+{
+  "name" = "/acs730/a1/prod/db_password"
+  "type" = "SecureString"
+  "version" = 1
+}
+
+== Check that no Terraform resource creates the parameter
+No aws_ssm_parameter resource found: the parameter is read, never created, by Terraform.
