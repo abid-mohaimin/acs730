@@ -1,0 +1,144 @@
+name: assignment1-deploy
+
+# Pull request: format and validate only (no AWS credentials needed).
+# Push to main: staging applies automatically, then prod waits for a human.
+# Evidence and REPORT.md are excluded, so committing them after teardown
+# does not rebuild staging.
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "assignment1/**"
+      - "!assignment1/evidence/**"
+      - "!assignment1/REPORT.md"
+      - ".github/workflows/assignment1-deploy.yml"
+  push:
+    branches: [main]
+    paths:
+      - "assignment1/**"
+      - "!assignment1/evidence/**"
+      - "!assignment1/REPORT.md"
+      - ".github/workflows/assignment1-deploy.yml"
+  workflow_dispatch:
+
+# One Terraform run at a time. A second run queues instead of cancelling one
+# that might be halfway through an apply.
+concurrency:
+  group: assignment1-terraform
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  TF_IN_AUTOMATION: "true"
+  TF_VERSION: "1.10.3"
+
+jobs:
+  validate:
+    name: fmt and validate (${{ matrix.env }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        env: [dev, staging, prod]
+    defaults:
+      run:
+        working-directory: assignment1/terraform/${{ matrix.env }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TF_VERSION }}
+          terraform_wrapper: false
+      - name: terraform fmt
+        run: terraform fmt -check -recursive ..
+      # -backend=false: no state, no credentials. That is why this job can
+      # run on a pull request even though no repository-level AWS secrets exist.
+      - name: terraform init (no backend)
+        run: terraform init -backend=false -input=false
+      - name: terraform validate
+        run: terraform validate
+
+  staging:
+    name: Deploy staging
+    needs: validate
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    # No protection rules on this environment, so it starts as soon as
+    # validate passes. The job can read ONLY the staging environment's secrets.
+    environment: staging
+    defaults:
+      run:
+        working-directory: assignment1/terraform/staging
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure AWS credentials (staging environment secrets)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - name: Show who we are
+        run: aws sts get-caller-identity
+
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TF_VERSION }}
+          terraform_wrapper: false
+
+      - name: terraform init (S3 backend, staging key)
+        run: terraform init -input=false
+
+      - name: terraform plan
+        run: terraform plan -input=false -no-color -out=tfplan
+
+      - name: terraform apply
+        run: terraform apply -input=false -no-color -auto-approve tfplan
+
+      - name: terraform output
+        run: terraform output -no-color
+
+  prod:
+    name: Deploy prod
+    needs: staging
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    # Required reviewer + branch policy (main only) live on this environment.
+    # The job does not start, and cannot read prod's secrets, until approved.
+    environment: prod
+    defaults:
+      run:
+        working-directory: assignment1/terraform/prod
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure AWS credentials (prod environment secrets)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - name: Show who we are
+        run: aws sts get-caller-identity
+
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TF_VERSION }}
+          terraform_wrapper: false
+
+      - name: terraform init (S3 backend, prod key)
+        run: terraform init -input=false
+
+      - name: terraform plan
+        run: terraform plan -input=false -no-color -out=tfplan
+
+      - name: terraform apply
+        run: terraform apply -input=false -no-color -auto-approve tfplan
+
+      - name: terraform output
+        run: terraform output -no-color
